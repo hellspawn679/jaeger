@@ -51,7 +51,7 @@ jobs:
 
     - name: Run elasticsearch integration tests
       id: test-execution
-      run: bash scripts/es-integration-test.sh elasticsearch v${{ matrix.major-version }}
+      run: bash scripts/es-integration-test.sh elasticsearch ${{ matrix.major-version }}
 
     - name: Output Elasticsearch logs
       run: docker logs ${{ steps.test-execution.outputs.cid }}

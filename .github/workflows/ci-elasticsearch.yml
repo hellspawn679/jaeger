@@ -44,7 +44,8 @@ jobs:
       run: make install-ci
 
     - uses: docker/setup-qemu-action@68827325e0b33c7199eb31dd4e31fbe9023e06e3 # v3.0.0
-    
+    - name : ls
+      run: ls 
     - name: Set up Elasticsearch
       run: |
           docker-compose -f docker-compose-elasticsearch-v${{ matrix.major-version }}.yml up -d

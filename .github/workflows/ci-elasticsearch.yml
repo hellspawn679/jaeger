@@ -47,7 +47,7 @@ jobs:
     
     - name: Set up Elasticsearch
       run: |
-          docker-compose -f docker-compose-elasticsearch-v${{ matrix.major-version }}.yml up -d
+          docker-compose -f  ./.github/workflows/docker-compose-elasticsearch-v${{ matrix.major-version }}.yml up -d
     - name: Run elasticsearch integration tests
       id: test-execution
       run: bash scripts/es-integration-test.sh Elasticsearch v${{ matrix.major-version }}
@@ -63,4 +63,4 @@ jobs:
         flags: elasticsearch-${{ matrix.version.major }}
     - name: Tear down
       run: |
-          docker-compose -f docker-compose-elasticsearch-v${{ matrix.major-version }}.yml down
+          docker-compose -f  ./.github/workflows/docker-compose-elasticsearch-v${{ matrix.major-version }}.yml down

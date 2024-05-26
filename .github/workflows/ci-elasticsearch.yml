@@ -49,15 +49,20 @@ jobs:
       run: |
            docker-compose -f  ./.github/workflows/docker-compose-elasticsearch-v${{ matrix.major-version }}.yml up -d
 
-    - name: Set up Docker Compose
-      run: |
+    - name: Run elasticsearch integration tests
+      id: test-execution
+      
+      run: | 
           if [ "${{ matrix.major-version }}" = "7" ]; then
             export ELASTICSEARCH_VERSION=$(grep 'image: docker.elastic.co/elasticsearch/elasticsearch' docker-compose-elasticsearch-v7.yml | cut -d ':' -f3)
           elif [ "${{ matrix.major-version }}" = "8" ]; then
             export ELASTICSEARCH_VERSION=$(grep 'image: docker.elastic.co/elasticsearch/elasticsearch' docker-compose-elasticsearch-v8.yml | cut -d ':' -f3)
+          else
+            echo "Unsupported Elasticsearch version"
+            exit 1
           fi
           echo "Elasticsearch version: $ELASTICSEARCH_VERSION"
-          docker-compose -f docker-compose-elasticsearch-v${{ matrix.major-version }}.yml up -d
+          bash scripts/es-integration-test.sh elasticsearch $ELASTICSEARCH_VERSION
 
     - name: Output Elasticsearch logs
       run: docker logs ${{ steps.test-execution.outputs.cid }}

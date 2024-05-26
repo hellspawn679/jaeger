@@ -53,9 +53,9 @@ jobs:
       id: test-execution
       run: | 
           if [ "${{ matrix.major-version }}" = "7" ]; then
-            export ELASTICSEARCH_VERSION=$(grep 'image: docker.elastic.co/elasticsearch/elasticsearch' docker-compose-elasticsearch-v7.yml | cut -d ':' -f3)
+            export ELASTICSEARCH_VERSION=$(grep 'image: docker.elastic.co/elasticsearch/elasticsearch' $(pwd)/.github/workflows/docker-compose-elasticsearch-v7.yml | cut -d ':' -f3)
           elif [ "${{ matrix.major-version }}" = "8" ]; then
-            export ELASTICSEARCH_VERSION=$(grep 'image: docker.elastic.co/elasticsearch/elasticsearch' docker-compose-elasticsearch-v8.yml | cut -d ':' -f3)
+            export ELASTICSEARCH_VERSION=$(grep 'image: docker.elastic.co/elasticsearch/elasticsearch' $(pwd)/.github/workflows/docker-compose-elasticsearch-v7.yml | cut -d ':' -f3)
           else
             echo "Unsupported Elasticsearch version"
             exit 1

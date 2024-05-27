@@ -105,6 +105,7 @@ bring_up_storage() {
   done
   if [ ${db_is_up} = "1" ]; then
   # shellcheck disable=SC2064
+    echo "--------------------------------------------compose_file=${compose_file}"
     trap "teardown_storage ${compose_file}" EXIT
   else
     echo "ERROR: unable to start ${distro}"

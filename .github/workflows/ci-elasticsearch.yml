@@ -65,6 +65,6 @@ jobs:
       uses: ./.github/actions/upload-codecov
       with:
         files: cover.out,cover-index-cleaner.out,cover-index-rollover.out
-        flags: elasticsearch-${{ matrix.version.major }}
+        flags: ${{ matrix.version.distribution }}-${{ matrix.version.major }}-${{ matrix.version.jaeger }}
     
 

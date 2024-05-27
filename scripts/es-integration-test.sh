@@ -90,8 +90,10 @@ bring_up_storage() {
     echo "attempt $retry"
     if [ "${distro}" = "elasticsearch" ]; then
       compose_file=$(setup_es "${version}")
+      echo "--------------------------------------------compose_file=${compose_file}"
     elif [ "${distro}" == "opensearch" ]; then
       compose_file=$(setup_opensearch "${version}")
+      echo "--------------------------------------------compose_file=${compose_file}"
     else
       echo "Unknown distribution $distro. Valid options are opensearch or elasticsearch"
       usage

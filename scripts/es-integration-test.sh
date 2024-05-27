@@ -30,7 +30,7 @@ setup_es() {
   fi
 
   docker-compose -f ${compose_file} up -d
-  echo "${compose_file}"
+  echo "+++++++++++++++++++++++++++++++++++++++++++++++++++compose_file=${compose_file}"
 }
 
 setup_opensearch() {
@@ -45,7 +45,7 @@ setup_opensearch() {
   fi
 
   docker-compose -f ${compose_file} up -d
-  echo "${compose_file}"
+  echo "+++++++++++++++++++++++++++++++++++++++++++++++++++compose_file=${compose_file}"
 }
 
 wait_for_storage() {

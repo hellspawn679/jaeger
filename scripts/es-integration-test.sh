@@ -70,6 +70,7 @@ wait_for_storage() {
 bring_up_storage() {
   local distro=$1
   local version=$2
+  local compose_file
 
   echo "starting ${distro} ${version}"
   for retry in 1 2 3

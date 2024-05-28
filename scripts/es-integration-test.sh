@@ -47,7 +47,7 @@ wait_for_storage() {
     sleep 10
   done
 
-  if [[ "$(curl "${params[@]}" "${url}")" == "200" ]]; then
+  if [[ "$(curl "${params[@]}" "${url}")" != "200" ]]; then
     echo "ERROR: ${distro} is not ready at ${url} after $(( attempt * 10 )) seconds"
     echo "::group::${distro} logs"
     docker compose -f "${compose_file}" logs

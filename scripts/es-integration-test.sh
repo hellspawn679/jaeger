@@ -24,7 +24,7 @@ setup_es() {
   local compose_file
   compose_file="docker-compose/elasticsearch/v${major_version}.yml"
   docker-compose -f "${compose_file}" up -d
-  echo "${compose_file}"
+
 }
 
 setup_opensearch() {
@@ -33,7 +33,7 @@ setup_opensearch() {
   local compose_file
   compose_file="docker-compose/opensearch/v${major_version}.yml"
   docker-compose -f "${compose_file}" up -d
-  echo "${compose_file}"
+  
 }
 
 wait_for_storage() {
@@ -72,17 +72,15 @@ bring_up_storage() {
   local version=$2
   local major_version=${version%%.*}
   local compose_file="docker-compose/${distro}/v${major_version}.yml"
-  local var
-  echo "---------------------------------------------------${major_version}------------------${compose_file}------------------"
 
   echo "starting ${distro} ${version}"
   for retry in 1 2 3
   do
     echo "attempt $retry"
     if [ "${distro}" = "elasticsearch" ]; then
-      var=$(setup_es "${version}")
+      setup_es "${version}"
     elif [ "${distro}" == "opensearch" ]; then
-      var=$(setup_opensearch "${version}")
+      setup_opensearch "${version}"
     else
       echo "Unknown distribution $distro. Valid options are opensearch or elasticsearch"
       usage

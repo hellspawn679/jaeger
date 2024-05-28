@@ -23,9 +23,9 @@ setup_es() {
   local major_version=${tag%%.*}
   local compose_file
   compose_file="docker-compose/elasticsearch/v${major_version}.yml"
-  docker-compose -f "${compose_file}" up -d
+  docker compose -f "${compose_file}" up -d
   local cid 
-  cid=$(docker-compose -f ./docker-compose/elasticsearch/v${major_version}.yml ps -q elasticsearch)
+  cid=$(docker compose -f ./docker-compose/elasticsearch/v"${major_version}".yml ps -q elasticsearch)
   echo "cid=${cid}" >> "$GITHUB_OUTPUT"
 }
 
@@ -33,10 +33,10 @@ setup_opensearch() {
   local tag=$1
   local major_version=${tag%%.*}
   local compose_file
-  compose_file="docker-compose/opensearch/v${major_version}.yml"
-  docker-compose -f "${compose_file}" up -d
+  compose_file="docker compose/opensearch/v${major_version}.yml"
+  docker compose -f "${compose_file}" up -d
   local cid 
-  cid=$(docker-compose -f ./docker-compose/opensearch/v${major_version}.yml ps -q opensearch)
+  cid=$(docker compose -f ./docker-compose/opensearch/v"${major_version}".yml ps -q opensearch)
   echo "cid=${cid}" >> "$GITHUB_OUTPUT"
 }
 
@@ -62,8 +62,8 @@ wait_for_storage() {
 
   if [[ "$(curl "${params[@]}" "${url}")" != "200" ]]; then
     echo "ERROR: ${distro} is not ready at ${url} after $(( attempt * 10 )) seconds"
-    docker-compose -f "${compose_file}" logs
-    docker-compose -f "${compose_file}" down
+    docker compose -f "${compose_file}" logs
+    docker compose -f "${compose_file}" down
     db_is_up=0
   else
     echo "SUCCESS: ${distro} is available at ${url}"
@@ -105,7 +105,7 @@ bring_up_storage() {
 
 teardown_storage() {
   local compose_file=$1
-  docker-compose -f "${compose_file}" down
+  docker compose -f "${compose_file}" down
 }
 
 main() {

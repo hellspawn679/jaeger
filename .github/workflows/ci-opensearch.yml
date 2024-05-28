@@ -64,8 +64,4 @@ jobs:
       run: docker logs ${{ steps.test-execution.outputs.cid }}
       if: ${{ failure() }}
 
-    - name: Upload coverage to codecov
-      uses: ./.github/actions/upload-codecov
-      with:
-        files: cover.out,cover-index-cleaner.out,cover-index-rollover.out
-        flags: ${{ matrix.version.distribution }}-${{ matrix.version.major }}-${{ matrix.version.jaeger }}
+    

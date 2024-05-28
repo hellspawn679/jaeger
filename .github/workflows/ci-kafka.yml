@@ -37,8 +37,4 @@ jobs:
       run: docker logs kafka
       if: ${{ failure() }}
 
-    - name: Upload coverage to codecov
-      uses: ./.github/actions/upload-codecov
-      with:
-        files: cover.out
-        flags: kafka
+    

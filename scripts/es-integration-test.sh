@@ -71,7 +71,7 @@ bring_up_storage() {
   local distro=$1
   local version=$2
   local major_version=${version%%.*}
-  compose_file="docker-compose/elasticsearch/v${major_version}.yml"
+  local compose_file="docker-compose/${distro}/v${major_version}.yml"
   echo "---------------------------------------------------${major_version}------------------${compose_file}------------------"
 
   echo "starting ${distro} ${version}"
@@ -79,9 +79,9 @@ bring_up_storage() {
   do
     echo "attempt $retry"
     if [ "${distro}" = "elasticsearch" ]; then
-      compose_file=$(setup_es "${version}")
+      $(setup_es "${version}")
     elif [ "${distro}" == "opensearch" ]; then
-      compose_file=$(setup_opensearch "${version}")
+      $(setup_opensearch "${version}")
     else
       echo "Unknown distribution $distro. Valid options are opensearch or elasticsearch"
       usage

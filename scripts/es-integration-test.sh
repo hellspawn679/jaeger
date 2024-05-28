@@ -18,7 +18,23 @@ check_arg() {
   fi
 }
 
+setup_es() {
+  local tag=$1
+  local major_version=${tag%%.*}
+  local compose_file
+  compose_file="docker-compose/elasticsearch/v${major_version}.yml"
+  docker-compose -f "${compose_file}" up -d
+  echo "${compose_file}"
+}
 
+setup_opensearch() {
+  local tag=$1
+  local major_version=${tag%%.*}
+  local compose_file
+  compose_file="docker-compose/opensearch/v${major_version}.yml"
+  docker-compose -f "${compose_file}" up -d
+  echo "${compose_file}"
+}
 
 wait_for_storage() {
   local distro=$1
@@ -54,19 +70,18 @@ wait_for_storage() {
 bring_up_storage() {
   local distro=$1
   local version=$2
-  local compose_file
   local major_version=${version%%.*}
+  compose_file="docker-compose/elasticsearch/v${major_version}.yml"
+  echo "---------------------------------------------------${major_version}------------------${compose_file}------------------"
 
   echo "starting ${distro} ${version}"
   for retry in 1 2 3
   do
     echo "attempt $retry"
     if [ "${distro}" = "elasticsearch" ]; then
-      compose_file="docker-compose/elasticsearch/v${major_version}.yml"
-      docker-compose -f "${compose_file}" up -d
+      compose_file=$(setup_es "${version}")
     elif [ "${distro}" == "opensearch" ]; then
-      compose_file="docker-compose/elasticsearch/v${major_version}.yml"
-      docker-compose -f "${compose_file}" up -d
+      compose_file=$(setup_opensearch "${version}")
     else
       echo "Unknown distribution $distro. Valid options are opensearch or elasticsearch"
       usage

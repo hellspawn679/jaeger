@@ -44,8 +44,4 @@ jobs:
             ;;
         esac
 
-    - name: Upload coverage to codecov
-      uses: ./.github/actions/upload-codecov
-      with:
-        files: cover.out
-        flags: badger_${{ matrix.version }}
+    

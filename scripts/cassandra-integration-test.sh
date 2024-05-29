@@ -15,15 +15,16 @@ check_arg() {
 }
 
 setup_cassandra() {
-  local tag=$1
-  local image=cassandra
-  local params=(
-    --detach
-    --publish 9042:9042
-    --publish 9160:9160
-  )
-  local cid
-  cid=$(docker run "${params[@]}" "${image}:${tag}")
+  local major_version=$1
+  local compose_file="docker-compose-${major_version}.yml"
+  
+  if [ ! -f "$compose_file" ]; then
+    echo "ERROR: Docker Compose file $compose_file does not exist."
+    exit 1
+  fi
+  
+  docker-compose -f "$compose_file" up -d
+  local cid=$(docker ps -q --filter ancestor=cassandra)
   echo "cid=${cid}" >> "$GITHUB_OUTPUT"
   echo "${cid}"
 }
@@ -53,13 +54,14 @@ apply_schema() {
 
 run_integration_test() {
   local version=$1
+  local major_version=${version%%.*}
   local schema_version=$2
   local jaegerVersion=$3
   local primaryKeyspace="jaeger_v1_dc1"
   local archiveKeyspace="jaeger_v1_dc1_archive"
 
   local cid
-  cid=$(setup_cassandra "${version}")
+  cid=$(setup_cassandra "${major_version}")
 
   apply_schema "$schema_version" "$primaryKeyspace"
   apply_schema "$schema_version" "$archiveKeyspace"

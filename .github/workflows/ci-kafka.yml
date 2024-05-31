@@ -35,5 +35,5 @@ jobs:
 
     - name: Output Kafka logs
       run: docker-compose -f docker-compose/kafka-integration-test/v3.yml  logs kafka
-      if: ${{ failure() }}
+
 

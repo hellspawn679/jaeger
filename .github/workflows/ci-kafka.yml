@@ -35,6 +35,6 @@ jobs:
 
     - name: Output Kafka logs
       run: docker logs kafka
-      if: ${{ failure() }}
+
 
     

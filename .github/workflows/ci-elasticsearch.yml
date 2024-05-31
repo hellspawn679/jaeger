@@ -62,5 +62,5 @@ jobs:
 
 
     - name: Output ${{ matrix.version.distribution }} logs
-      run: docker compose -f docker-compose/elasticsearch/v${{matrix.version.major}}.yml logs ${{ steps.test-execution.outputs.cid }}
+      run: docker compose -f docker-compose/elasticsearch/v${{matrix.version.major}}.yml logs 
 

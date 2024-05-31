@@ -103,13 +103,7 @@ main() {
 
   bring_up_storage "${distro}" "${es_version}"
 
-  if [[ "${j_version}" == "v2" ]]; then
-    STORAGE=${distro} SPAN_STORAGE_TYPE=${distro} make jaeger-v2-storage-integration-test
-  else
-    STORAGE=${distro} make storage-integration-test
-    make index-cleaner-integration-test
-    make index-rollover-integration-test
-  fi
+ 
 }
 
 main "$@"

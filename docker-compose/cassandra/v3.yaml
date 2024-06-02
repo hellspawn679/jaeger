@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  cassandra:
+    image: cassandra:3.11
+    ports:
+      - "9042:9042"
+      - "9160:9160"
+    networks:
+      - cassandra-net
+    healthcheck:
+      test: ["CMD", "cqlsh", "-e", "describe keyspaces"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  cassandra-schema:
+    image: cassandra-schema
+    build:
+      context: ./plugin/storage/cassandra
+    depends_on:
+      cassandra:
+        condition: service_healthy
+    networks:
+      - cassandra-net
+    environment:
+      CQLSH_HOST: cassandra
+      CQLSH_PORT: 9042
+      TEMPLATE: /cassandra-schema/v003.cql.tmpl
+      KEYSPACE: jaeger_v1_dc1
+    entrypoint: ["/bin/sh", "-c", "/apply_schema.sh"]
+
+networks:
+  cassandra-net:
+    driver: bridge

@@ -16,12 +16,9 @@ check_arg() {
 
 setup_cassandra() {
   local major_version=$1
-  local compose_file="docker-compose-${major_version}.yml"
+  local compose_file="docker-compose/cassandra/v3.yaml"
   
-  if [ ! -f "$compose_file" ]; then
-    echo "ERROR: Docker Compose file $compose_file does not exist."
-    exit 1
-  fi
+  
   
   docker-compose -f "$compose_file" up -d
   local cid=$(docker ps -q --filter ancestor=cassandra)

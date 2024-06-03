@@ -16,19 +16,14 @@ check_arg() {
 
 setup_cassandra() {
   local major_version=$1
-  local compose_file="docker-compose/cassandra/v3.yaml"
-  
-  
-  
+  local compose_file=$2
   docker-compose -f "$compose_file" up -d
-  local cid=$(docker ps -q --filter ancestor=cassandra)
-  echo "cid=${cid}" >> "$GITHUB_OUTPUT"
-  echo "${cid}"
+  echo "docker_compose_file=${compose_file}" >> "${GITHUB_OUTPUT:-/dev/null}"
 }
 
 teardown_cassandra() {
-  local cid=$1
-  docker kill "${cid}"
+  local compose_file=$1
+  docker compose -f "$compose_file" down
   exit "${exit_status}"
 }
 
@@ -56,9 +51,9 @@ run_integration_test() {
   local jaegerVersion=$3
   local primaryKeyspace="jaeger_v1_dc1"
   local archiveKeyspace="jaeger_v1_dc1_archive"
-
+  local compose_file="docker-compose/cassandra/v3.yaml"
   local cid
-  cid=$(setup_cassandra "${major_version}")
+  cid=$(setup_cassandra "${major_version}" "${compose_file}")
 
   apply_schema "$schema_version" "$primaryKeyspace"
   apply_schema "$schema_version" "$archiveKeyspace"
@@ -75,7 +70,7 @@ run_integration_test() {
   fi
 
   # shellcheck disable=SC2064
-  trap "teardown_cassandra ${cid}" EXIT
+  trap "teardown_cassandra ${compose_file}" EXIT
 }
 
 

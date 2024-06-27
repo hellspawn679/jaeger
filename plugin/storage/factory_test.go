@@ -328,6 +328,13 @@ func TestCreateSamplingStoreFactory(t *testing.T) {
 	ssFactory, err = f.CreateSamplingStoreFactory()
 	assert.Equal(t, ssFactory, f.factories["cassandra"])
 	require.NoError(t, err)
+
+	// //fail test 
+	// cfg.SamplingStorageType= "nothing"
+	// f, err = NewFactory(cfg)
+	// require.NoError(t, err)
+	// _, err = f.CreateSamplingStoreFactory()
+	// require.Error(t, err)
 }
 
 type configurable struct {

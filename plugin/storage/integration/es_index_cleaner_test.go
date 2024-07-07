@@ -33,7 +33,7 @@ const (
 	spanIndexName         = "jaeger-span-2019-01-01"
 	serviceIndexName      = "jaeger-service-2019-01-01"
 	indexCleanerImage     = "localhost:5000/jaegertracing/jaeger-es-index-cleaner:local-test"
-	rolloverImage         = "jaegertracing/jaeger-es-rollover:1.57.0"
+	rolloverImage         = "localhost:5000/jaegertracing/jaeger-es-rollover:local-test"
 	rolloverNowEnvVar     = `CONDITIONS='{"max_age":"0s"}'`
 )
 

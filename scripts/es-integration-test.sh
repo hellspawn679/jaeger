@@ -108,6 +108,7 @@ build_local_img(){
     export GITHUB_SHA="local-test"
     make create-baseimg
     bash scripts/build-upload-a-docker-image.sh ${LOCAL_FLAG} -b -c jaeger-es-index-cleaner -d cmd/es-index-cleaner -p "${platforms}" -t release -l Y
+    bash scripts/build-upload-a-docker-image.sh ${LOCAL_FLAG} -b -c jaeger-es-rollover -d cmd/es-rollover  -p "${platforms}" -t release -l Y
 }
 
 main() {

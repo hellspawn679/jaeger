@@ -1,0 +1,1401 @@
+T15:31:22 db_is_up=
+T15:31:22 main elasticsearch 7.x v1
+T15:31:22 check_arg elasticsearch 7.x v1
+T15:31:22 '[' '!' 3 -eq 3 ']'
+T15:31:22 local distro=elasticsearch
+T15:31:22 local es_version=7.x
+T15:31:22 local j_version=7.x
+T15:31:22 bring_up_storage elasticsearch 7.x
+T15:31:22 local distro=elasticsearch
+T15:31:22 local version=7.x
+T15:31:22 local major_version=7
+T15:31:22 local compose_file=docker-compose/elasticsearch/v7/docker-compose.yml
+T15:31:22 echo 'starting elasticsearch 7'
+starting elasticsearch 7
+T15:31:22 for retry in 1 2 3
+T15:31:22 echo 'attempt 1'
+attempt 1
+T15:31:22 '[' elasticsearch = elasticsearch ']'
+T15:31:22 setup_db docker-compose/elasticsearch/v7/docker-compose.yml
+T15:31:22 local compose_file=docker-compose/elasticsearch/v7/docker-compose.yml
+T15:31:22 docker compose -f docker-compose/elasticsearch/v7/docker-compose.yml up -d
+time="2024-07-07T15:31:22Z" level=warning msg="/home/runner/work/jaeger/jaeger/docker-compose/elasticsearch/v7/docker-compose.yml: `version` is obsolete"
+ elasticsearch Pulling 
+ bef9b66d64c1 Pulling fs layer 
+ 17ef683c4570 Pulling fs layer 
+ 3cd15eabbcc1 Pulling fs layer 
+ 4ca545ee6d5d Pulling fs layer 
+ debf675e56e9 Pulling fs layer 
+ 044b651245ad Pulling fs layer 
+ d87988066472 Pulling fs layer 
+ 93ba9bb36fb8 Pulling fs layer 
+ b3ffa3ef4ca5 Pulling fs layer 
+ 0e03daef1aae Pulling fs layer 
+ 4ca545ee6d5d Waiting 
+ debf675e56e9 Waiting 
+ 044b651245ad Waiting 
+ d87988066472 Waiting 
+ b3ffa3ef4ca5 Waiting 
+ 93ba9bb36fb8 Waiting 
+ 0e03daef1aae Waiting 
+ bef9b66d64c1 Downloading [>                                                  ]  310.1kB/29.92MB
+ 17ef683c4570 Downloading [>                                                  ]  80.87kB/7.816MB
+ bef9b66d64c1 Downloading [=============================================>     ]  26.99MB/29.92MB
+ bef9b66d64c1 Verifying Checksum 
+ bef9b66d64c1 Download complete 
+ 17ef683c4570 Downloading [=======>                                           ]  1.229MB/7.816MB
+ bef9b66d64c1 Extracting [>                                                  ]  327.7kB/29.92MB
+ 17ef683c4570 Downloading [===================>                               ]  3.032MB/7.816MB
+ bef9b66d64c1 Extracting [=========>                                         ]  5.898MB/29.92MB
+ 3cd15eabbcc1 Downloading [================================>                  ]  3.596kB/5.537kB
+ 3cd15eabbcc1 Downloading [==================================================>]  5.537kB/5.537kB
+ 3cd15eabbcc1 Verifying Checksum 
+ 3cd15eabbcc1 Download complete 
+ 4ca545ee6d5d Downloading [==================================================>]      42B/42B
+ 4ca545ee6d5d Verifying Checksum 
+ 4ca545ee6d5d Download complete 
+ 17ef683c4570 Downloading [===============================>                   ]  4.998MB/7.816MB
+ bef9b66d64c1 Extracting [================>                                  ]  10.16MB/29.92MB
+ 17ef683c4570 Downloading [================================================>  ]  7.553MB/7.816MB
+ 17ef683c4570 Verifying Checksum 
+ 17ef683c4570 Download complete 
+ bef9b66d64c1 Extracting [========================>                          ]  14.75MB/29.92MB
+ 044b651245ad Downloading [==================================================>]  9.737kB/9.737kB
+ 044b651245ad Verifying Checksum 
+ 044b651245ad Download complete 
+ bef9b66d64c1 Extracting [======================================>            ]  23.27MB/29.92MB
+ debf675e56e9 Downloading [>                                                  ]  539.6kB/338.9MB
+ d87988066472 Downloading [==================================================>]  2.046kB/2.046kB
+ d87988066472 Verifying Checksum 
+ d87988066472 Download complete 
+ debf675e56e9 Downloading [>                                                  ]  3.767MB/338.9MB
+ bef9b66d64c1 Extracting [==========================================>        ]  25.56MB/29.92MB
+ debf675e56e9 Downloading [=>                                                 ]  8.043MB/338.9MB
+ bef9b66d64c1 Extracting [================================================>  ]  28.84MB/29.92MB
+ debf675e56e9 Downloading [==>                                                ]  13.94MB/338.9MB
+ bef9b66d64c1 Extracting [=================================================> ]  29.82MB/29.92MB
+ bef9b66d64c1 Extracting [==================================================>]  29.92MB/29.92MB
+ debf675e56e9 Downloading [===>                                               ]  20.92MB/338.9MB
+ bef9b66d64c1 Pull complete 
+ 17ef683c4570 Extracting [>                                                  ]   98.3kB/7.816MB
+ 93ba9bb36fb8 Downloading [====>                                              ]  17.91kB/200.3kB
+ debf675e56e9 Downloading [====>                                              ]  29.98MB/338.9MB
+ b3ffa3ef4ca5 Downloading [==================================================>]     415B/415B
+ b3ffa3ef4ca5 Verifying Checksum 
+ b3ffa3ef4ca5 Download complete 
+ 17ef683c4570 Extracting [=======================>                           ]  3.736MB/7.816MB
+ debf675e56e9 Downloading [======>                                            ]   41.2MB/338.9MB
+ 93ba9bb36fb8 Downloading [==================================>                ]  136.7kB/200.3kB
+ 93ba9bb36fb8 Downloading [==================================================>]  200.3kB/200.3kB
+ 93ba9bb36fb8 Verifying Checksum 
+ 93ba9bb36fb8 Download complete 
+ 17ef683c4570 Extracting [===============================================>   ]  7.373MB/7.816MB
+ debf675e56e9 Downloading [========>                                          ]  55.62MB/338.9MB
+ 17ef683c4570 Extracting [==================================================>]  7.816MB/7.816MB
+ debf675e56e9 Downloading [==========>                                        ]  74.41MB/338.9MB
+ debf675e56e9 Downloading [==============>                                    ]  97.45MB/338.9MB
+ 17ef683c4570 Pull complete 
+ 3cd15eabbcc1 Extracting [==================================================>]  5.537kB/5.537kB
+ 3cd15eabbcc1 Extracting [==================================================>]  5.537kB/5.537kB
+ 3cd15eabbcc1 Pull complete 
+ 4ca545ee6d5d Extracting [==================================================>]      42B/42B
+ 4ca545ee6d5d Extracting [==================================================>]      42B/42B
+ 4ca545ee6d5d Pull complete 
+ 0e03daef1aae Downloading [=======>                                           ]  16.38kB/110.7kB
+ 0e03daef1aae Downloading [==================================================>]  110.7kB/110.7kB
+ 0e03daef1aae Verifying Checksum 
+ 0e03daef1aae Download complete 
+ debf675e56e9 Downloading [=================>                                 ]  119.4MB/338.9MB
+ debf675e56e9 Downloading [======================>                            ]  149.8MB/338.9MB
+ debf675e56e9 Downloading [==========================>                        ]  176.6MB/338.9MB
+ debf675e56e9 Downloading [==============================>                    ]  203.4MB/338.9MB
+ debf675e56e9 Downloading [=================================>                 ]  229.1MB/338.9MB
+ debf675e56e9 Downloading [=====================================>             ]  255.3MB/338.9MB
+ debf675e56e9 Downloading [=========================================>         ]  282.1MB/338.9MB
+ debf675e56e9 Downloading [=============================================>     ]  308.3MB/338.9MB
+ debf675e56e9 Downloading [=================================================> ]  334.6MB/338.9MB
+ debf675e56e9 Verifying Checksum 
+ debf675e56e9 Download complete 
+ debf675e56e9 Extracting [>                                                  ]  557.1kB/338.9MB
+ debf675e56e9 Extracting [==>                                                ]  18.94MB/338.9MB
+ debf675e56e9 Extracting [=====>                                             ]  40.67MB/338.9MB
+ debf675e56e9 Extracting [=========>                                         ]  62.39MB/338.9MB
+ debf675e56e9 Extracting [============>                                      ]  84.12MB/338.9MB
+ debf675e56e9 Extracting [=============>                                     ]  93.03MB/338.9MB
+ debf675e56e9 Extracting [==============>                                    ]  101.4MB/338.9MB
+ debf675e56e9 Extracting [================>                                  ]  110.9MB/338.9MB
+ debf675e56e9 Extracting [=================>                                 ]  120.3MB/338.9MB
+ debf675e56e9 Extracting [===================>                               ]  129.2MB/338.9MB
+ debf675e56e9 Extracting [====================>                              ]  137.6MB/338.9MB
+ debf675e56e9 Extracting [=====================>                             ]  144.8MB/338.9MB
+ debf675e56e9 Extracting [======================>                            ]  153.2MB/338.9MB
+ debf675e56e9 Extracting [=======================>                           ]  161.5MB/338.9MB
+ debf675e56e9 Extracting [==========================>                        ]    181MB/338.9MB
+ debf675e56e9 Extracting [=============================>                     ]  202.2MB/338.9MB
+ debf675e56e9 Extracting [===============================>                   ]  214.5MB/338.9MB
+ debf675e56e9 Extracting [=================================>                 ]  227.8MB/338.9MB
+ debf675e56e9 Extracting [===================================>               ]  237.3MB/338.9MB
+ debf675e56e9 Extracting [====================================>              ]  249.6MB/338.9MB
+ debf675e56e9 Extracting [=======================================>           ]  265.2MB/338.9MB
+ debf675e56e9 Extracting [=========================================>         ]  283.5MB/338.9MB
+ debf675e56e9 Extracting [===========================================>       ]  297.5MB/338.9MB
+ debf675e56e9 Extracting [=============================================>     ]  307.5MB/338.9MB
+ debf675e56e9 Extracting [===============================================>   ]  325.3MB/338.9MB
+ debf675e56e9 Extracting [==================================================>]  338.9MB/338.9MB
+ debf675e56e9 Pull complete 
+ 044b651245ad Extracting [==================================================>]  9.737kB/9.737kB
+ 044b651245ad Extracting [==================================================>]  9.737kB/9.737kB
+ 044b651245ad Pull complete 
+ d87988066472 Extracting [==================================================>]  2.046kB/2.046kB
+ d87988066472 Extracting [==================================================>]  2.046kB/2.046kB
+ d87988066472 Pull complete 
+ 93ba9bb36fb8 Extracting [========>                                          ]  32.77kB/200.3kB
+ 93ba9bb36fb8 Extracting [==================================================>]  200.3kB/200.3kB
+ 93ba9bb36fb8 Extracting [==================================================>]  200.3kB/200.3kB
+ 93ba9bb36fb8 Pull complete 
+ b3ffa3ef4ca5 Extracting [==================================================>]     415B/415B
+ b3ffa3ef4ca5 Extracting [==================================================>]     415B/415B
+ b3ffa3ef4ca5 Pull complete 
+ 0e03daef1aae Extracting [==============>                                    ]  32.77kB/110.7kB
+ 0e03daef1aae Extracting [==================================================>]  110.7kB/110.7kB
+ 0e03daef1aae Pull complete 
+ elasticsearch Pulled 
+ Network v7_default  Creating
+ Network v7_default  Created
+ Container v7-elasticsearch-1  Creating
+ Container v7-elasticsearch-1  Created
+ Container v7-elasticsearch-1  Starting
+ Container v7-elasticsearch-1  Started
+T15:31:30 echo docker_compose_file=docker-compose/elasticsearch/v7/docker-compose.yml
+T15:31:30 wait_for_storage elasticsearch http://localhost:9200 docker-compose/elasticsearch/v7/docker-compose.yml
+T15:31:30 local distro=elasticsearch
+T15:31:30 local url=http://localhost:9200
+T15:31:30 local compose_file=docker-compose/elasticsearch/v7/docker-compose.yml
+T15:31:30 params=('--silent' '--output' '/dev/null' '--write-out' '%{http_code}')
+T15:31:30 local params
+T15:31:30 local max_attempts=60
+T15:31:30 local attempt=0
+T15:31:30 echo 'Waiting for elasticsearch to be available at http://localhost:9200...'
+Waiting for elasticsearch to be available at http://localhost:9200...
+TT15:31:30 curl --silent --output /dev/null --write-out '%{http_code}' http://localhost:9200
+T15:31:30 [[ 000 == \2\0\0 ]]
+T15:31:30 ((  attempt >= max_attempts  ))
+T15:31:30 attempt=1
+T15:31:30 echo 'Attempt: 1 elasticsearch is not yet available at http://localhost:9200...'
+Attempt: 1 elasticsearch is not yet available at http://localhost:9200...
+T15:31:30 sleep 10
+TT15:31:40 curl --silent --output /dev/null --write-out '%{http_code}' http://localhost:9200
+T15:31:40 [[ 000 == \2\0\0 ]]
+T15:31:40 ((  attempt >= max_attempts  ))
+T15:31:40 attempt=2
+T15:31:40 echo 'Attempt: 2 elasticsearch is not yet available at http://localhost:9200...'
+Attempt: 2 elasticsearch is not yet available at http://localhost:9200...
+T15:31:40 sleep 10
+TT15:31:50 curl --silent --output /dev/null --write-out '%{http_code}' http://localhost:9200
+T15:31:50 [[ 200 == \2\0\0 ]]
+TT15:31:50 curl --silent --output /dev/null --write-out '%{http_code}' http://localhost:9200
+T15:31:50 [[ 200 != \2\0\0 ]]
+T15:31:50 echo 'SUCCESS: elasticsearch is available at http://localhost:9200'
+SUCCESS: elasticsearch is available at http://localhost:9200
+T15:31:50 db_is_up=1
+T15:31:50 '[' 1 = 1 ']'
+T15:31:50 break
+T15:31:50 '[' 1 = 1 ']'
+T15:31:50 trap 'teardown_storage docker-compose/elasticsearch/v7/docker-compose.yml' EXIT
+T15:31:50 build_local_img
+T15:31:50 local LOCAL_FLAG=
+T15:31:50 local platforms=linux/amd64
+TT15:31:50 tr , ' '
+TT15:31:50 echo linux/amd64
+T15:31:50 for platform in $(echo "$platforms" | tr ',' ' ')
+T15:31:50 arch=amd64
+T15:31:50 make build-binaries-amd64
+GOOS=linux GOARCH=amd64 make _build-platform-binaries
+make[1]: Entering directory '/home/runner/work/jaeger/jaeger'
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath   -o ./cmd/agent/agent-linux-amd64 -ldflags "-X github.com/jaegertracing/jaeger/pkg/version.commitSHA=8e02c108586d17eaa53d2390df600bff8d5425e8 -X github.com/jaegertracing/jaeger/pkg/version.latestVersion=v1.58.0 -X github.com/jaegertracing/jaeger/pkg/version.date=2024-07-07T15:29:10Z" ./cmd/agent
+make rebuild-ui
+make[2]: Entering directory '/home/runner/work/jaeger/jaeger'
+bash ./scripts/rebuild-ui.sh
++ cd jaeger-ui
++ git fetch --all --tags
++ git log --oneline --decorate=full -n 10
++ cat
+560c749b (grafted, HEAD, tag: refs/tags/v1.58.0) Prepare release v1.58.0 (#2331)
+++ git describe --tags --dirty
++ last_tag=v1.58.0
++ [[ v1.58.0 =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
+++ git rev-parse HEAD
++ branch_hash=560c749b481f8244bf76b0afe001174fa9ce11f5
+++ git rev-parse v1.58.0
++ last_tag_hash=560c749b481f8244bf76b0afe001174fa9ce11f5
++ [[ 560c749b481f8244bf76b0afe001174fa9ce11f5 == \5\6\0\c\7\4\9\b\4\8\1\f\8\2\4\4\b\f\7\6\b\0\a\f\e\0\0\1\1\7\4\f\a\9\c\e\1\1\f\5 ]]
+++ mktemp
++ temp_file=/tmp/tmp.9XAYwcISXC
++ trap 'rm -f /tmp/tmp.9XAYwcISXC' EXIT
++ release_url=https://github.com/jaegertracing/jaeger-ui/releases/download/v1.58.0/assets.tar.gz
++ curl --silent --fail --location --output /tmp/tmp.9XAYwcISXC https://github.com/jaegertracing/jaeger-ui/releases/download/v1.58.0/assets.tar.gz
++ mkdir -p packages/jaeger-ui/build/
++ rm -r -f packages/jaeger-ui/build/
++ tar -zxvf /tmp/tmp.9XAYwcISXC packages/jaeger-ui/build/
+packages/jaeger-ui/build/
+packages/jaeger-ui/build/static/
+packages/jaeger-ui/build/static/monitor-BYreg9RK.png
+packages/jaeger-ui/build/static/jaeger-logo-CNZsoUdk.svg
+packages/jaeger-ui/build/static/index-bzTJ6oK_.css
+packages/jaeger-ui/build/static/index-legacy-CpL7BSIU.js
+packages/jaeger-ui/build/static/index-CDLMgXBK.js
+packages/jaeger-ui/build/static/polyfills-legacy-D919C7DZ.js
+packages/jaeger-ui/build/static/favicon-BxcVf0am.ico
+packages/jaeger-ui/build/index.html
++ exit 0
++ rm -f /tmp/tmp.9XAYwcISXC
+NOTE: This target only rebuilds the UI assets inside jaeger-ui/packages/jaeger-ui/build/.
+NOTE: To make them usable from query-service run 'make build-ui'.
+make[2]: Leaving directory '/home/runner/work/jaeger/jaeger'
+# do not delete dot-files
+rm -rf cmd/query/app/ui/actual/*
+cp -r jaeger-ui/packages/jaeger-ui/build/* cmd/query/app/ui/actual/
+find cmd/query/app/ui/actual -type f | grep -v .gitignore | xargs gzip --no-name
+# copy the timestamp for index.html.gz from the original file
+touch -t $(date -r jaeger-ui/packages/jaeger-ui/build/index.html '+%Y%m%d%H%M.%S') cmd/query/app/ui/actual/index.html.gz
+ls -lF cmd/query/app/ui/actual/
+total 8
+-rw-r--r-- 1 runner docker 1835 Jun 11 15:26 index.html.gz
+drwxr-xr-x 2 runner docker 4096 Jul  7 15:32 static/
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath  -tags ui -o ./cmd/all-in-one/all-in-one-linux-amd64 -ldflags "-X github.com/jaegertracing/jaeger/pkg/version.commitSHA=8e02c108586d17eaa53d2390df600bff8d5425e8 -X github.com/jaegertracing/jaeger/pkg/version.latestVersion=v1.58.0 -X github.com/jaegertracing/jaeger/pkg/version.date=2024-07-07T15:29:10Z" ./cmd/all-in-one
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath   -o ./cmd/collector/collector-linux-amd64 -ldflags "-X github.com/jaegertracing/jaeger/pkg/version.commitSHA=8e02c108586d17eaa53d2390df600bff8d5425e8 -X github.com/jaegertracing/jaeger/pkg/version.latestVersion=v1.58.0 -X github.com/jaegertracing/jaeger/pkg/version.date=2024-07-07T15:29:10Z" ./cmd/collector
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath  -tags ui -o ./cmd/query/query-linux-amd64 -ldflags "-X github.com/jaegertracing/jaeger/pkg/version.commitSHA=8e02c108586d17eaa53d2390df600bff8d5425e8 -X github.com/jaegertracing/jaeger/pkg/version.latestVersion=v1.58.0 -X github.com/jaegertracing/jaeger/pkg/version.date=2024-07-07T15:29:10Z" ./cmd/query
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath   -o ./cmd/ingester/ingester-linux-amd64 -ldflags "-X github.com/jaegertracing/jaeger/pkg/version.commitSHA=8e02c108586d17eaa53d2390df600bff8d5425e8 -X github.com/jaegertracing/jaeger/pkg/version.latestVersion=v1.58.0 -X github.com/jaegertracing/jaeger/pkg/version.date=2024-07-07T15:29:10Z" ./cmd/ingester
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath  -tags ui -o ./cmd/jaeger/jaeger-linux-amd64 -ldflags "-X github.com/jaegertracing/jaeger/pkg/version.commitSHA=8e02c108586d17eaa53d2390df600bff8d5425e8 -X github.com/jaegertracing/jaeger/pkg/version.latestVersion=v1.58.0 -X github.com/jaegertracing/jaeger/pkg/version.date=2024-07-07T15:29:10Z" ./cmd/jaeger
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath   -o ./cmd/remote-storage/remote-storage-linux-amd64 -ldflags "-X github.com/jaegertracing/jaeger/pkg/version.commitSHA=8e02c108586d17eaa53d2390df600bff8d5425e8 -X github.com/jaegertracing/jaeger/pkg/version.latestVersion=v1.58.0 -X github.com/jaegertracing/jaeger/pkg/version.date=2024-07-07T15:29:10Z" ./cmd/remote-storage
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath -o ./examples/hotrod/hotrod-linux-amd64 ./examples/hotrod/main.go
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath -ldflags "-X github.com/jaegertracing/jaeger/pkg/version.commitSHA=8e02c108586d17eaa53d2390df600bff8d5425e8 -X github.com/jaegertracing/jaeger/pkg/version.latestVersion=v1.58.0 -X github.com/jaegertracing/jaeger/pkg/version.date=2024-07-07T15:29:10Z" -o ./cmd/tracegen/tracegen-linux-amd64 ./cmd/tracegen/
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath -ldflags "-X github.com/jaegertracing/jaeger/pkg/version.commitSHA=8e02c108586d17eaa53d2390df600bff8d5425e8 -X github.com/jaegertracing/jaeger/pkg/version.latestVersion=v1.58.0 -X github.com/jaegertracing/jaeger/pkg/version.date=2024-07-07T15:29:10Z" -o ./cmd/anonymizer/anonymizer-linux-amd64 -ldflags "-X github.com/jaegertracing/jaeger/pkg/version.commitSHA=8e02c108586d17eaa53d2390df600bff8d5425e8 -X github.com/jaegertracing/jaeger/pkg/version.latestVersion=v1.58.0 -X github.com/jaegertracing/jaeger/pkg/version.date=2024-07-07T15:29:10Z" ./cmd/anonymizer/
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath -o ./plugin/storage/es/esmapping-generator-linux-amd64 -ldflags "-X github.com/jaegertracing/jaeger/pkg/version.commitSHA=8e02c108586d17eaa53d2390df600bff8d5425e8 -X github.com/jaegertracing/jaeger/pkg/version.latestVersion=v1.58.0 -X github.com/jaegertracing/jaeger/pkg/version.date=2024-07-07T15:29:10Z" ./cmd/esmapping-generator/
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath -o ./cmd/es-index-cleaner/es-index-cleaner-linux-amd64 ./cmd/es-index-cleaner/
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath -o ./cmd/es-rollover/es-rollover-linux-amd64 ./cmd/es-rollover/
+make _build-platform-binaries-debug GOOS=linux GOARCH=amd64 DEBUG_BINARY=1
+make[2]: Entering directory '/home/runner/work/jaeger/jaeger'
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath -gcflags="all=-N -l"  -o ./cmd/agent/agent-debug-linux-amd64 -ldflags "-X github.com/jaegertracing/jaeger/pkg/version.commitSHA=8e02c108586d17eaa53d2390df600bff8d5425e8 -X github.com/jaegertracing/jaeger/pkg/version.latestVersion=v1.58.0 -X github.com/jaegertracing/jaeger/pkg/version.date=2024-07-07T15:29:10Z" ./cmd/agent
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath -gcflags="all=-N -l"  -o ./cmd/collector/collector-debug-linux-amd64 -ldflags "-X github.com/jaegertracing/jaeger/pkg/version.commitSHA=8e02c108586d17eaa53d2390df600bff8d5425e8 -X github.com/jaegertracing/jaeger/pkg/version.latestVersion=v1.58.0 -X github.com/jaegertracing/jaeger/pkg/version.date=2024-07-07T15:29:10Z" ./cmd/collector
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath -gcflags="all=-N -l" -tags ui -o ./cmd/query/query-debug-linux-amd64 -ldflags "-X github.com/jaegertracing/jaeger/pkg/version.commitSHA=8e02c108586d17eaa53d2390df600bff8d5425e8 -X github.com/jaegertracing/jaeger/pkg/version.latestVersion=v1.58.0 -X github.com/jaegertracing/jaeger/pkg/version.date=2024-07-07T15:29:10Z" ./cmd/query
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath -gcflags="all=-N -l"  -o ./cmd/ingester/ingester-debug-linux-amd64 -ldflags "-X github.com/jaegertracing/jaeger/pkg/version.commitSHA=8e02c108586d17eaa53d2390df600bff8d5425e8 -X github.com/jaegertracing/jaeger/pkg/version.latestVersion=v1.58.0 -X github.com/jaegertracing/jaeger/pkg/version.date=2024-07-07T15:29:10Z" ./cmd/ingester
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath -gcflags="all=-N -l"  -o ./cmd/remote-storage/remote-storage-debug-linux-amd64 -ldflags "-X github.com/jaegertracing/jaeger/pkg/version.commitSHA=8e02c108586d17eaa53d2390df600bff8d5425e8 -X github.com/jaegertracing/jaeger/pkg/version.latestVersion=v1.58.0 -X github.com/jaegertracing/jaeger/pkg/version.date=2024-07-07T15:29:10Z" ./cmd/remote-storage
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath -gcflags="all=-N -l" -tags ui -o ./cmd/all-in-one/all-in-one-debug-linux-amd64 -ldflags "-X github.com/jaegertracing/jaeger/pkg/version.commitSHA=8e02c108586d17eaa53d2390df600bff8d5425e8 -X github.com/jaegertracing/jaeger/pkg/version.latestVersion=v1.58.0 -X github.com/jaegertracing/jaeger/pkg/version.date=2024-07-07T15:29:10Z" ./cmd/all-in-one
+make[2]: Leaving directory '/home/runner/work/jaeger/jaeger'
+make[1]: Leaving directory '/home/runner/work/jaeger/jaeger'
+T15:34:25 make create-baseimg
+docker buildx inspect jaeger-build > /dev/null || docker buildx create --use --name=jaeger-build --buildkitd-flags="--allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host" --driver-opt="network=host"
+ERROR: no builder "jaeger-build" found
+jaeger-build
+docker inspect registry > /dev/null || docker run --rm -d -p 5000:5000 --name registry registry:2
+Error: No such object: registry
+Unable to find image 'registry:2' locally
+2: Pulling from library/registry
+73baa7ef167e: Already exists
+d49090716641: Pulling fs layer
+bc8f2b8a18ff: Pulling fs layer
+9d41963883ad: Pulling fs layer
+ad02dd2076d6: Pulling fs layer
+ad02dd2076d6: Waiting
+d49090716641: Verifying Checksum
+d49090716641: Download complete
+9d41963883ad: Verifying Checksum
+9d41963883ad: Download complete
+bc8f2b8a18ff: Verifying Checksum
+ad02dd2076d6: Verifying Checksum
+ad02dd2076d6: Download complete
+d49090716641: Pull complete
+bc8f2b8a18ff: Pull complete
+9d41963883ad: Pull complete
+ad02dd2076d6: Pull complete
+Digest: sha256:79b29591e1601a73f03fcd413e655b72b9abfae5a23f1ad2e883d4942fbb4351
+Status: Downloaded newer image for registry:2
+8bfe5f4a3d1355874392e75b72840b9b410b10b849d071ef052ad821953ca68f
+docker buildx build -t localhost:5000/baseimg_alpine:latest --push \
+	--platform=linux/amd64,linux/s390x,linux/ppc64le,linux/arm64 \
+	docker/base
+#0 building with "jaeger-build" instance using docker-container driver
+
+#1 [internal] booting buildkit
+#1 pulling image moby/buildkit:buildx-stable-1
+#1 pulling image moby/buildkit:buildx-stable-1 0.7s done
+#1 creating container buildx_buildkit_jaeger-build0
+#1 creating container buildx_buildkit_jaeger-build0 0.5s done
+#1 DONE 1.2s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 278B done
+#2 DONE 0.0s
+
+#3 [linux/amd64 internal] load metadata for docker.io/library/alpine:3.20.1
+#3 ...
+
+#4 [auth] library/alpine:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#5 [linux/arm64 internal] load metadata for docker.io/library/alpine:3.20.1
+#5 ...
+
+#6 [linux/ppc64le internal] load metadata for docker.io/library/alpine:3.20.1
+#6 DONE 2.7s
+
+#7 [internal] load .dockerignore
+#7 transferring context: 2B done
+#7 DONE 0.0s
+
+#8 [linux/s390x internal] load metadata for docker.io/library/alpine:3.20.1
+#8 DONE 2.7s
+
+#3 [linux/amd64 internal] load metadata for docker.io/library/alpine:3.20.1
+#3 DONE 2.7s
+
+#5 [linux/arm64 internal] load metadata for docker.io/library/alpine:3.20.1
+#5 DONE 2.7s
+
+#9 [linux/amd64 cert 1/2] FROM docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0
+#9 resolve docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0 0.0s done
+#9 sha256:ec99f8b99825a742d50fb3ce173d291378a46ab54b8ef7dd75e5654e2a296e99 3.62MB / 3.62MB 0.1s done
+#9 extracting sha256:ec99f8b99825a742d50fb3ce173d291378a46ab54b8ef7dd75e5654e2a296e99
+#9 extracting sha256:ec99f8b99825a742d50fb3ce173d291378a46ab54b8ef7dd75e5654e2a296e99 0.2s done
+#9 DONE 0.4s
+
+#10 [linux/s390x cert 1/2] FROM docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0
+#10 resolve docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0 0.0s done
+#10 sha256:f9a77bce0ddc1b9251f410e8c69566b002f4e557ee68895b558671311b17fd91 3.46MB / 3.46MB 0.1s done
+#10 extracting sha256:f9a77bce0ddc1b9251f410e8c69566b002f4e557ee68895b558671311b17fd91
+#10 extracting sha256:f9a77bce0ddc1b9251f410e8c69566b002f4e557ee68895b558671311b17fd91 0.2s done
+#10 DONE 0.4s
+
+#11 [linux/ppc64le cert 1/2] FROM docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0
+#11 resolve docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0 0.0s done
+#11 sha256:b02dcd5eb44e382ea711bca074a007403db63dacf55f888b3a87214d1052dd50 3.57MB / 3.57MB 0.1s done
+#11 extracting sha256:b02dcd5eb44e382ea711bca074a007403db63dacf55f888b3a87214d1052dd50 0.3s done
+#11 DONE 0.4s
+
+#12 [linux/arm64 cert 1/2] FROM docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0
+#12 resolve docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0 0.0s done
+#12 sha256:a258b2a6b59a7aa244d8ceab095c7f8df726f27075a69fca7ad8490f3f63148a 4.09MB / 4.09MB 0.1s done
+#12 extracting sha256:a258b2a6b59a7aa244d8ceab095c7f8df726f27075a69fca7ad8490f3f63148a 0.3s done
+#12 DONE 0.5s
+
+#13 [linux/arm64 cert 2/2] RUN apk add --update --no-cache ca-certificates mailcap
+#13 0.662 fetch https://dl-cdn.alpinelinux.org/alpine/v3.20/main/aarch64/APKINDEX.tar.gz
+#13 1.586 fetch https://dl-cdn.alpinelinux.org/alpine/v3.20/community/aarch64/APKINDEX.tar.gz
+#13 ...
+
+#14 [linux/amd64 cert 2/2] RUN apk add --update --no-cache ca-certificates mailcap
+#14 0.659 fetch https://dl-cdn.alpinelinux.org/alpine/v3.20/main/x86_64/APKINDEX.tar.gz
+#14 0.995 fetch https://dl-cdn.alpinelinux.org/alpine/v3.20/community/x86_64/APKINDEX.tar.gz
+#14 1.436 (1/2) Installing ca-certificates (20240226-r0)
+#14 1.466 (2/2) Installing mailcap (2.1.54-r0)
+#14 1.471 Executing busybox-1.36.1-r29.trigger
+#14 1.504 Executing ca-certificates-20240226-r0.trigger
+#14 1.619 OK: 9 MiB in 16 packages
+#14 DONE 1.8s
+
+#15 [linux/amd64 stage-1 2/3] COPY --from=cert /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+#15 DONE 0.0s
+
+#16 [linux/amd64 stage-1 3/3] COPY --from=cert /etc/mime.types /etc/mime.types
+#16 DONE 0.0s
+
+#17 [linux/ppc64le cert 2/2] RUN apk add --update --no-cache ca-certificates mailcap
+#17 0.762 fetch https://dl-cdn.alpinelinux.org/alpine/v3.20/main/ppc64le/APKINDEX.tar.gz
+#17 1.756 fetch https://dl-cdn.alpinelinux.org/alpine/v3.20/community/ppc64le/APKINDEX.tar.gz
+#17 3.297 (1/2) Installing ca-certificates (20240226-r0)
+#17 3.378 (2/2) Installing mailcap (2.1.54-r0)
+#17 ...
+
+#13 [linux/arm64 cert 2/2] RUN apk add --update --no-cache ca-certificates mailcap
+#13 2.800 (1/2) Installing ca-certificates (20240226-r0)
+#13 2.848 (2/2) Installing mailcap (2.1.54-r0)
+#13 2.855 Executing busybox-1.36.1-r29.trigger
+#13 2.897 Executing ca-certificates-20240226-r0.trigger
+#13 3.176 OK: 10 MiB in 16 packages
+#13 DONE 3.3s
+
+#18 [linux/arm64 stage-1 2/3] COPY --from=cert /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+#18 DONE 0.0s
+
+#19 [linux/arm64 stage-1 3/3] COPY --from=cert /etc/mime.types /etc/mime.types
+#19 DONE 0.0s
+
+#17 [linux/ppc64le cert 2/2] RUN apk add --update --no-cache ca-certificates mailcap
+#17 3.388 Executing busybox-1.36.1-r29.trigger
+#17 3.446 Executing ca-certificates-20240226-r0.trigger
+#17 3.758 OK: 9 MiB in 16 packages
+#17 DONE 3.9s
+
+#20 [linux/ppc64le stage-1 2/3] COPY --from=cert /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+#20 DONE 0.0s
+
+#21 [linux/ppc64le stage-1 3/3] COPY --from=cert /etc/mime.types /etc/mime.types
+#21 DONE 0.0s
+
+#22 [linux/s390x cert 2/2] RUN apk add --update --no-cache ca-certificates mailcap
+#22 0.742 fetch https://dl-cdn.alpinelinux.org/alpine/v3.20/main/s390x/APKINDEX.tar.gz
+#22 1.888 fetch https://dl-cdn.alpinelinux.org/alpine/v3.20/community/s390x/APKINDEX.tar.gz
+#22 3.753 (1/2) Installing ca-certificates (20240226-r0)
+#22 3.846 (2/2) Installing mailcap (2.1.54-r0)
+#22 3.857 Executing busybox-1.36.1-r29.trigger
+#22 3.897 Executing ca-certificates-20240226-r0.trigger
+#22 4.180 OK: 9 MiB in 16 packages
+#22 DONE 4.3s
+
+#23 [linux/s390x stage-1 2/3] COPY --from=cert /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+#23 DONE 0.0s
+
+#24 [linux/s390x stage-1 3/3] COPY --from=cert /etc/mime.types /etc/mime.types
+#24 DONE 0.0s
+
+#25 exporting to image
+#25 exporting layers 0.1s done
+#25 exporting manifest sha256:ca15c81946a55db36a094c4c428fc2bac136d23c1c4fced818cd9986cd432384 done
+#25 exporting config sha256:04ad517c1acbb3b92050405fa277902edc60fc6a3b41954430f7edc5a4938a60 done
+#25 exporting attestation manifest sha256:171f8fa3c81aec0c405968bb943b1cc920454c587fc21807bc6b5f224e5a5529 done
+#25 exporting manifest sha256:37582d3c4c6ae9383609cf29d9beabd491f707761242b7ca0aa2a1ed9e674b9f done
+#25 exporting config sha256:96be41ed6b676acb188bee73d0213434779ba43ca940a830915ad81b13e2da13 done
+#25 exporting attestation manifest sha256:9a4a290218fdbeb8785828c5a166ae329d7be4fbceb587502209e2c258521ddc done
+#25 exporting manifest sha256:10c083282e1c81644104a9edff389aebe81dbcd12104dbc94d76d00c8000b7a1 done
+#25 exporting config sha256:6d110905aeb3e2530c1298c87f1c7a30d9dffd6a0e5bdb8201d5751e09c50cc3 done
+#25 exporting attestation manifest sha256:55198b8efd6b27de893596bdf6fce034fcb870de3b220865f4a3381fef10d84d done
+#25 exporting manifest sha256:451c466bfc53b9516134d6da65f219b2475f0d710cb932285ad59e4cf750a70c done
+#25 exporting config sha256:4912f38c7e2edea4bdb50af84e9e89e247dbc38193854fc1d5aa95a19b483f11 done
+#25 exporting attestation manifest sha256:0d06dd2e92ffd49f65d06bb3ad9dfab1362cc8b38cd1c4588cb80bc03cae27c1 done
+#25 exporting manifest list sha256:63d37ae1c2beeb2d1f40c38b1eff5e046d9cba5a99dc95c7f9624218184b8a43 done
+#25 pushing layers 0.1s done
+#25 pushing manifest for localhost:5000/baseimg_alpine:latest@sha256:63d37ae1c2beeb2d1f40c38b1eff5e046d9cba5a99dc95c7f9624218184b8a43
+#25 pushing manifest for localhost:5000/baseimg_alpine:latest@sha256:63d37ae1c2beeb2d1f40c38b1eff5e046d9cba5a99dc95c7f9624218184b8a43 0.0s done
+#25 DONE 0.3s
+T15:34:38 docker build --build-arg base_image=localhost:5000/baseimg_alpine:latest --file cmd/es-index-cleaner/Dockerfile -t jaegertracing/jaeger-es-index-cleaner:local-test cmd/es-index-cleaner
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 251B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for localhost:5000/baseimg_alpine:latest
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/2] FROM localhost:5000/baseimg_alpine:latest@sha256:63d37ae1c2beeb2d1f40c38b1eff5e046d9cba5a99dc95c7f9624218184b8a43
+#4 resolve localhost:5000/baseimg_alpine:latest@sha256:63d37ae1c2beeb2d1f40c38b1eff5e046d9cba5a99dc95c7f9624218184b8a43 done
+#4 extracting sha256:b8fb95df695f73ff992c8c641be5574671e9161ee3e547a92f0a90c97a2f465b done
+#4 extracting sha256:80fa29e139ebbaa8f94f58a110c87785647c788a077de7a54dfa8f97fa095727
+#4 extracting sha256:80fa29e139ebbaa8f94f58a110c87785647c788a077de7a54dfa8f97fa095727 done
+#4 sha256:b8fb95df695f73ff992c8c641be5574671e9161ee3e547a92f0a90c97a2f465b 127.52kB / 127.52kB 0.0s done
+#4 sha256:80fa29e139ebbaa8f94f58a110c87785647c788a077de7a54dfa8f97fa095727 20.20kB / 20.20kB 0.0s done
+#4 sha256:63d37ae1c2beeb2d1f40c38b1eff5e046d9cba5a99dc95c7f9624218184b8a43 3.11kB / 3.11kB done
+#4 sha256:ca15c81946a55db36a094c4c428fc2bac136d23c1c4fced818cd9986cd432384 862B / 862B done
+#4 sha256:04ad517c1acbb3b92050405fa277902edc60fc6a3b41954430f7edc5a4938a60 1.06kB / 1.06kB done
+#4 DONE 0.1s
+
+#5 [internal] load build context
+#5 transferring context: 13.19MB 0.1s done
+#5 DONE 0.1s
+
+#6 [2/2] COPY es-index-cleaner-linux-amd64 /go/bin/es-index-cleaner-linux
+#6 DONE 0.0s
+
+#7 exporting to image
+#7 exporting layers
+#7 exporting layers 0.3s done
+#7 writing image sha256:b9af0f9fb856fb62667f578a7d639473be668b7bc83ed39d18f23d8885a550bf done
+#7 naming to docker.io/jaegertracing/jaeger-es-index-cleaner:local-test done
+#7 DONE 0.3s
+T15:34:39 [[ 7.x == \v\2 ]]
+T15:34:39 STORAGE=elasticsearch
+T15:34:39 make storage-integration-test
+# Expire tests results for storage integration tests since the environment might change
+# even though the code remains the same.
+go clean -testcache
+bash -c "set -e; set -o pipefail; go test -race -v -coverpkg=./... -coverprofile cover.out ./plugin/storage/integration/... | sed 's/PASS/✅ PASS/g' | sed 's/FAIL/❌ FAIL/g' | sed 's/SKIP/🔕 SKIP/g'"
+=== RUN   TestBadgerStorage
+    integration.go:109: This test requires environment variable STORAGE=badger
+--- 🔕 SKIP: TestBadgerStorage (0.00s)
+=== RUN   TestCassandraStorage
+    integration.go:109: This test requires environment variable STORAGE=cassandra
+--- 🔕 SKIP: TestCassandraStorage (0.00s)
+=== RUN   TestElasticsearchStorage
+    logger.go:146: 2024-07-07T15:36:09.940Z	INFO	config/config.go:192	Elasticsearch detected	{"version": 7}
+    logger.go:146: 2024-07-07T15:36:09.945Z	INFO	config/config.go:192	Elasticsearch detected	{"version": 7}
+=== RUN   TestElasticsearchStorage/GetServices
+    integration.go:337: 2024-07-07 15:36:10.12  Writing trace with 5 spans
+    integration.go:141: Waiting for storage backend to update documents, iteration 1 out of 100
+=== RUN   TestElasticsearchStorage/GetOperations
+    integration.go:337: 2024-07-07 15:36:11.705 Writing trace with 5 spans
+    integration.go:141: Waiting for storage backend to update documents, iteration 1 out of 100
+=== RUN   TestElasticsearchStorage/GetTrace
+    integration.go:337: 2024-07-07 15:36:13.197 Writing trace with 5 spans
+    integration.go:266: trace not found
+    integration.go:141: Waiting for storage backend to update documents, iteration 1 out of 100
+=== RUN   TestElasticsearchStorage/GetTrace/NotFound_error
+=== RUN   TestElasticsearchStorage/GetLargeSpans
+    integration.go:201: Testing Large Trace over 10K ...
+    integration.go:337: 2024-07-07 15:36:14.753 Writing trace with 10008 spans
+    integration.go:141: Waiting for storage backend to update documents, iteration 1 out of 100
+=== RUN   TestElasticsearchStorage/FindTraces
+    integration.go:337: 2024-07-07 15:36:42.878 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.015 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.192 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.196 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.201 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.206 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.213 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.219 Writing trace with 2 spans
+    integration.go:337: 2024-07-07 15:36:43.381 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.54  Writing trace with 2 spans
+    integration.go:337: 2024-07-07 15:36:43.548 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.551 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.555 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.558 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.561 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.568 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.572 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.577 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.581 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.585 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.588 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.592 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.596 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.601 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.604 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.608 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:36:43.609 Writing trace with 1 spans
+=== RUN   TestElasticsearchStorage/FindTraces/Tag_escaped_operator_+_Operation_name_+_max_Duration
+    integration.go:323: Expecting certain number of traces: expected: 1, actual: 0
+    integration.go:141: Waiting for storage backend to update documents, iteration 1 out of 100
+=== RUN   TestElasticsearchStorage/FindTraces/Tag_wildcard_regex
+=== RUN   TestElasticsearchStorage/FindTraces/Tags_in_one_spot_-_Tags
+=== RUN   TestElasticsearchStorage/FindTraces/Tags_in_one_spot_-_Logs
+=== RUN   TestElasticsearchStorage/FindTraces/Tags_in_one_spot_-_Process
+=== RUN   TestElasticsearchStorage/FindTraces/Tags_in_different_spots
+=== RUN   TestElasticsearchStorage/FindTraces/Trace_spans_over_multiple_indices
+=== RUN   TestElasticsearchStorage/FindTraces/Operation_name
+=== RUN   TestElasticsearchStorage/FindTraces/Operation_name_+_max_Duration
+=== RUN   TestElasticsearchStorage/FindTraces/Operation_name_+_Duration_range
+=== RUN   TestElasticsearchStorage/FindTraces/Duration_range
+=== RUN   TestElasticsearchStorage/FindTraces/max_Duration
+=== RUN   TestElasticsearchStorage/FindTraces/default
+=== RUN   TestElasticsearchStorage/FindTraces/Tags_+_Operation_name
+=== RUN   TestElasticsearchStorage/FindTraces/Tags_+_Operation_name_+_max_Duration
+=== RUN   TestElasticsearchStorage/FindTraces/Tags_+_Operation_name_+_Duration_range
+=== RUN   TestElasticsearchStorage/FindTraces/Tags_+_Duration_range
+=== RUN   TestElasticsearchStorage/FindTraces/Tags_+_max_Duration
+=== RUN   TestElasticsearchStorage/FindTraces/Multi-spot_Tags_+_Operation_name
+=== RUN   TestElasticsearchStorage/FindTraces/Multi-spot_Tags_+_Operation_name_+_max_Duration
+=== RUN   TestElasticsearchStorage/FindTraces/Multi-spot_Tags_+_Operation_name_+_Duration_range
+=== RUN   TestElasticsearchStorage/FindTraces/Multi-spot_Tags_+_Duration_range
+=== RUN   TestElasticsearchStorage/FindTraces/Multi-spot_Tags_+_max_Duration
+=== RUN   TestElasticsearchStorage/FindTraces/Multiple_Traces
+=== RUN   TestElasticsearchStorage/ArchiveTrace
+    integration.go:141: Waiting for storage backend to update documents, iteration 1 out of 100
+    integration.go:141: Waiting for storage backend to update documents, iteration 2 out of 100
+=== RUN   TestElasticsearchStorage/GetDependencies
+    integration.go:141: Waiting for storage backend to update documents, iteration 1 out of 100
+    integration.go:141: Waiting for storage backend to update documents, iteration 2 out of 100
+=== RUN   TestElasticsearchStorage/GetThroughput
+    integration.go:141: Waiting for storage backend to update documents, iteration 1 out of 100
+=== RUN   TestElasticsearchStorage/GetLatestProbability
+    integration.go:141: Waiting for storage backend to update documents, iteration 1 out of 100
+--- ✅ PASS: TestElasticsearchStorage (41.97s)
+    --- ✅ PASS: TestElasticsearchStorage/GetServices (1.58s)
+    --- ✅ PASS: TestElasticsearchStorage/GetOperations (1.49s)
+    --- ✅ PASS: TestElasticsearchStorage/GetTrace (1.54s)
+        --- ✅ PASS: TestElasticsearchStorage/GetTrace/NotFound_error (0.01s)
+    --- ✅ PASS: TestElasticsearchStorage/GetLargeSpans (28.14s)
+    --- ✅ PASS: TestElasticsearchStorage/FindTraces (2.42s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Tag_escaped_operator_+_Operation_name_+_max_Duration (1.06s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Tag_wildcard_regex (0.03s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Tags_in_one_spot_-_Tags (0.03s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Tags_in_one_spot_-_Logs (0.03s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Tags_in_one_spot_-_Process (0.03s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Tags_in_different_spots (0.03s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Trace_spans_over_multiple_indices (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Operation_name (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Operation_name_+_max_Duration (0.01s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Operation_name_+_Duration_range (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Duration_range (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/max_Duration (0.01s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/default (0.01s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Tags_+_Operation_name (0.04s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Tags_+_Operation_name_+_max_Duration (0.04s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Tags_+_Operation_name_+_Duration_range (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Tags_+_Duration_range (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Tags_+_max_Duration (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Multi-spot_Tags_+_Operation_name (0.03s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Multi-spot_Tags_+_Operation_name_+_max_Duration (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Multi-spot_Tags_+_Operation_name_+_Duration_range (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Multi-spot_Tags_+_Duration_range (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Multi-spot_Tags_+_max_Duration (0.03s)
+        --- ✅ PASS: TestElasticsearchStorage/FindTraces/Multiple_Traces (0.03s)
+    --- ✅ PASS: TestElasticsearchStorage/ArchiveTrace (2.05s)
+    --- ✅ PASS: TestElasticsearchStorage/GetDependencies (2.04s)
+    --- ✅ PASS: TestElasticsearchStorage/GetThroughput (1.18s)
+    --- ✅ PASS: TestElasticsearchStorage/GetLatestProbability (1.22s)
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields
+    logger.go:146: 2024-07-07T15:36:51.806Z	INFO	config/config.go:192	Elasticsearch detected	{"version": 7}
+    logger.go:146: 2024-07-07T15:36:51.809Z	INFO	config/config.go:192	Elasticsearch detected	{"version": 7}
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/GetServices
+    integration.go:337: 2024-07-07 15:36:51.851 Writing trace with 5 spans
+    integration.go:141: Waiting for storage backend to update documents, iteration 1 out of 100
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/GetOperations
+    integration.go:337: 2024-07-07 15:36:53.238 Writing trace with 5 spans
+    integration.go:141: Waiting for storage backend to update documents, iteration 1 out of 100
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/GetTrace
+    integration.go:337: 2024-07-07 15:36:54.573 Writing trace with 5 spans
+    integration.go:266: trace not found
+    integration.go:141: Waiting for storage backend to update documents, iteration 1 out of 100
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/GetTrace/NotFound_error
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/GetLargeSpans
+    integration.go:201: Testing Large Trace over 10K ...
+    integration.go:337: 2024-07-07 15:36:55.938 Writing trace with 10008 spans
+    integration.go:141: Waiting for storage backend to update documents, iteration 1 out of 100
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces
+    integration.go:337: 2024-07-07 15:37:18.822 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:18.949 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.112 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.115 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.119 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.15  Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.155 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.186 Writing trace with 2 spans
+    integration.go:337: 2024-07-07 15:37:19.375 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.51  Writing trace with 2 spans
+    integration.go:337: 2024-07-07 15:37:19.516 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.519 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.523 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.527 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.535 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.54  Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.544 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.57  Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.573 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.576 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.581 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.584 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.588 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.593 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.597 Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.6   Writing trace with 1 spans
+    integration.go:337: 2024-07-07 15:37:19.603 Writing trace with 1 spans
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tag_escaped_operator_+_Operation_name_+_max_Duration
+    integration.go:323: Expecting certain number of traces: expected: 1, actual: 0
+    integration.go:141: Waiting for storage backend to update documents, iteration 1 out of 100
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tag_wildcard_regex
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tags_in_one_spot_-_Tags
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tags_in_one_spot_-_Logs
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tags_in_one_spot_-_Process
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tags_in_different_spots
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Trace_spans_over_multiple_indices
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Operation_name
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Operation_name_+_max_Duration
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Operation_name_+_Duration_range
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Duration_range
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/max_Duration
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/default
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tags_+_Operation_name
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tags_+_Operation_name_+_max_Duration
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tags_+_Operation_name_+_Duration_range
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tags_+_Duration_range
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tags_+_max_Duration
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Multi-spot_Tags_+_Operation_name
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Multi-spot_Tags_+_Operation_name_+_max_Duration
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Multi-spot_Tags_+_Operation_name_+_Duration_range
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Multi-spot_Tags_+_Duration_range
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Multi-spot_Tags_+_max_Duration
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Multiple_Traces
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/ArchiveTrace
+    integration.go:141: Waiting for storage backend to update documents, iteration 1 out of 100
+    integration.go:141: Waiting for storage backend to update documents, iteration 2 out of 100
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/GetDependencies
+    integration.go:141: Waiting for storage backend to update documents, iteration 1 out of 100
+    integration.go:141: Waiting for storage backend to update documents, iteration 2 out of 100
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/GetThroughput
+    integration.go:141: Waiting for storage backend to update documents, iteration 1 out of 100
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields/GetLatestProbability
+    integration.go:141: Waiting for storage backend to update documents, iteration 1 out of 100
+--- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields (35.69s)
+    --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/GetServices (1.39s)
+    --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/GetOperations (1.34s)
+    --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/GetTrace (1.35s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/GetTrace/NotFound_error (0.00s)
+    --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/GetLargeSpans (22.90s)
+    --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces (2.29s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tag_escaped_operator_+_Operation_name_+_max_Duration (1.02s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tag_wildcard_regex (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tags_in_one_spot_-_Tags (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tags_in_one_spot_-_Logs (0.01s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tags_in_one_spot_-_Process (0.01s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tags_in_different_spots (0.01s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Trace_spans_over_multiple_indices (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Operation_name (0.01s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Operation_name_+_max_Duration (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Operation_name_+_Duration_range (0.01s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Duration_range (0.01s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/max_Duration (0.01s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/default (0.01s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tags_+_Operation_name (0.04s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tags_+_Operation_name_+_max_Duration (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tags_+_Operation_name_+_Duration_range (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tags_+_Duration_range (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Tags_+_max_Duration (0.03s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Multi-spot_Tags_+_Operation_name (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Multi-spot_Tags_+_Operation_name_+_max_Duration (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Multi-spot_Tags_+_Operation_name_+_Duration_range (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Multi-spot_Tags_+_Duration_range (0.01s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Multi-spot_Tags_+_max_Duration (0.02s)
+        --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/FindTraces/Multiple_Traces (0.02s)
+    --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/ArchiveTrace (2.04s)
+    --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/GetDependencies (2.03s)
+    --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/GetThroughput (1.16s)
+    --- ✅ PASS: TestElasticsearchStorage_AllTagsAsObjectFields/GetLatestProbability (1.15s)
+=== RUN   TestElasticsearchStorage_IndexTemplates
+    logger.go:146: 2024-07-07T15:37:27.497Z	INFO	config/config.go:192	Elasticsearch detected	{"version": 7}
+    logger.go:146: 2024-07-07T15:37:27.499Z	INFO	config/config.go:192	Elasticsearch detected	{"version": 7}
+--- ✅ PASS: TestElasticsearchStorage_IndexTemplates (0.07s)
+=== RUN   TestIndexCleaner_doNotFailOnEmptyStorage
+{"level":"info","ts":1720366647.7059855,"caller":"es-index-cleaner/main.go:89","msg":"Indices before this date will be deleted","date":"2024-07-01T00:00:00Z"}
+{"level":"info","ts":1720366647.7064533,"caller":"es-index-cleaner/main.go:98","msg":"Queried indices","indices":null}
+{"level":"info","ts":1720366647.7065578,"caller":"es-index-cleaner/main.go:102","msg":"No indices to delete"}
+
+{"level":"info","ts":1720366647.8556142,"caller":"es-index-cleaner/main.go:89","msg":"Indices before this date will be deleted","date":"2024-07-01T00:00:00Z"}
+{"level":"info","ts":1720366647.856015,"caller":"es-index-cleaner/main.go:98","msg":"Queried indices","indices":null}
+{"level":"info","ts":1720366647.8561254,"caller":"es-index-cleaner/main.go:102","msg":"No indices to delete"}
+
+{"level":"info","ts":1720366648.0004091,"caller":"es-index-cleaner/main.go:89","msg":"Indices before this date will be deleted","date":"2024-07-01T00:00:00Z"}
+{"level":"info","ts":1720366648.0004473,"caller":"es-index-cleaner/main.go:98","msg":"Queried indices","indices":null}
+{"level":"info","ts":1720366648.000512,"caller":"es-index-cleaner/main.go:102","msg":"No indices to delete"}
+
+--- ✅ PASS: TestIndexCleaner_doNotFailOnEmptyStorage (0.48s)
+=== RUN   TestIndexCleaner_doNotFailOnFullStorage
+Unable to find image 'jaegertracing/jaeger-es-rollover:1.57.0' locally
+1.57.0: Pulling from jaegertracing/jaeger-es-rollover
+a88dc8b54e91: Already exists
+6b84b6642faa: Pulling fs layer
+a9e1d35f515c: Pulling fs layer
+b50e24a58401: Pulling fs layer
+6b84b6642faa: Verifying Checksum
+6b84b6642faa: Download complete
+a9e1d35f515c: Verifying Checksum
+a9e1d35f515c: Download complete
+6b84b6642faa: Pull complete
+b50e24a58401: Verifying Checksum
+b50e24a58401: Download complete
+a9e1d35f515c: Pull complete
+b50e24a58401: Pull complete
+Digest: sha256:9eeead0a49d18ebddf67b5798fbb46c8ba2e4d221a6cfdb2a138beebaa4108bc
+Status: Downloaded newer image for jaegertracing/jaeger-es-rollover:1.57.0
+
+
+
+
+{"level":"info","ts":1720366651.9507627,"caller":"es-index-cleaner/main.go:89","msg":"Indices before this date will be deleted","date":"2020-05-30T00:00:00Z"}
+{"level":"info","ts":1720366651.9507997,"caller":"es-index-cleaner/main.go:98","msg":"Queried indices","indices":[{"Index":"jaeger-span-000001","CreationTime":"2024-07-07T15:37:30.813Z","Aliases":{"jaeger-span-read":true}},{"Index":"jaeger-span-archive","CreationTime":"2024-07-07T15:37:28.22Z","Aliases":{}},{"Index":"jaeger-span-archive-000001","CreationTime":"2024-07-07T15:37:30.183Z","Aliases":{"jaeger-span-archive-read":true}},{"Index":"jaeger-dependencies-000002","CreationTime":"2024-07-07T15:37:31.674Z","Aliases":{"jaeger-dependencies-read":true,"jaeger-dependencies-write":true}},{"Index":"jaeger-dependencies-2019-01-01","CreationTime":"2024-07-07T15:37:28.133Z","Aliases":{}},{"Index":"jaeger-service-000001","CreationTime":"2024-07-07T15:37:30.949Z","Aliases":{"jaeger-service-read":true}},{"Index":"jaeger-service-000002","CreationTime":"2024-07-07T15:37:31.535Z","Aliases":{"jaeger-service-read":true,"jaeger-service-write":true}},{"Index":"jaeger-service-2019-01-01","CreationTime":"2024-07-07T15:37:28.091Z","Aliases":{}},{"Index":"jaeger-span-000002","CreationTime":"2024-07-07T15:37:31.388Z","Aliases":{"jaeger-span-read":true,"jaeger-span-write":true}},{"Index":"jaeger-span-2019-01-01","CreationTime":"2024-07-07T15:37:28.041Z","Aliases":{}},{"Index":"jaeger-span-archive-000002","CreationTime":"2024-07-07T15:37:30.513Z","Aliases":{"jaeger-span-archive-read":true,"jaeger-span-archive-write":true}},{"Index":"jaeger-dependencies-000001","CreationTime":"2024-07-07T15:37:31.092Z","Aliases":{"jaeger-dependencies-read":true}},{"Index":"jaeger-sampling-2019-01-01","CreationTime":"2024-07-07T15:37:28.176Z","Aliases":{}}]}
+{"level":"info","ts":1720366651.951,"caller":"es-index-cleaner/main.go:102","msg":"No indices to delete"}
+
+
+
+
+
+{"level":"info","ts":1720366654.3944058,"caller":"es-index-cleaner/main.go:89","msg":"Indices before this date will be deleted","date":"2020-05-30T00:00:00Z"}
+{"level":"info","ts":1720366654.3944352,"caller":"es-index-cleaner/main.go:98","msg":"Queried indices","indices":[{"Index":"jaeger-span-000002","CreationTime":"2024-07-07T15:37:33.793Z","Aliases":{"jaeger-span-read":true,"jaeger-span-write":true}},{"Index":"jaeger-span-archive","CreationTime":"2024-07-07T15:37:32.425Z","Aliases":{}},{"Index":"jaeger-dependencies-000001","CreationTime":"2024-07-07T15:37:33.489Z","Aliases":{"jaeger-dependencies-read":true}},{"Index":"jaeger-dependencies-000002","CreationTime":"2024-07-07T15:37:34.086Z","Aliases":{"jaeger-dependencies-read":true,"jaeger-dependencies-write":true}},{"Index":"jaeger-dependencies-2019-01-01","CreationTime":"2024-07-07T15:37:32.279Z","Aliases":{}},{"Index":"jaeger-service-000001","CreationTime":"2024-07-07T15:37:33.349Z","Aliases":{"jaeger-service-read":true}},{"Index":"jaeger-service-000002","CreationTime":"2024-07-07T15:37:33.934Z","Aliases":{"jaeger-service-read":true,"jaeger-service-write":true}},{"Index":"jaeger-service-2019-01-01","CreationTime":"2024-07-07T15:37:32.174Z","Aliases":{}},{"Index":"jaeger-sampling-2019-01-01","CreationTime":"2024-07-07T15:37:32.382Z","Aliases":{}},{"Index":"jaeger-span-000001","CreationTime":"2024-07-07T15:37:33.224Z","Aliases":{"jaeger-span-read":true}},{"Index":"jaeger-span-2019-01-01","CreationTime":"2024-07-07T15:37:32.072Z","Aliases":{}},{"Index":"jaeger-span-archive-000001","CreationTime":"2024-07-07T15:37:32.646Z","Aliases":{"jaeger-span-archive-read":true}},{"Index":"jaeger-span-archive-000002","CreationTime":"2024-07-07T15:37:32.928Z","Aliases":{"jaeger-span-archive-read":true,"jaeger-span-archive-write":true}}]}
+{"level":"info","ts":1720366654.394572,"caller":"es-index-cleaner/main.go:102","msg":"No indices to delete"}
+
+
+
+
+
+{"level":"info","ts":1720366656.7896342,"caller":"es-index-cleaner/main.go:89","msg":"Indices before this date will be deleted","date":"2020-05-30T00:00:00Z"}
+{"level":"info","ts":1720366656.7896683,"caller":"es-index-cleaner/main.go:98","msg":"Queried indices","indices":[{"Index":"jaeger-span-archive-000002","CreationTime":"2024-07-07T15:37:35.438Z","Aliases":{"jaeger-span-archive-read":true,"jaeger-span-archive-write":true}},{"Index":"jaeger-dependencies-000001","CreationTime":"2024-07-07T15:37:35.984Z","Aliases":{"jaeger-dependencies-read":true}},{"Index":"jaeger-dependencies-2019-01-01","CreationTime":"2024-07-07T15:37:34.763Z","Aliases":{}},{"Index":"jaeger-sampling-2019-01-01","CreationTime":"2024-07-07T15:37:34.865Z","Aliases":{}},{"Index":"jaeger-service-2019-01-01","CreationTime":"2024-07-07T15:37:34.647Z","Aliases":{}},{"Index":"jaeger-span-000002","CreationTime":"2024-07-07T15:37:36.256Z","Aliases":{"jaeger-span-read":true,"jaeger-span-write":true}},{"Index":"jaeger-span-2019-01-01","CreationTime":"2024-07-07T15:37:34.545Z","Aliases":{}},{"Index":"jaeger-span-archive","CreationTime":"2024-07-07T15:37:34.909Z","Aliases":{}},{"Index":"jaeger-span-archive-000001","CreationTime":"2024-07-07T15:37:35.146Z","Aliases":{"jaeger-span-archive-read":true}},{"Index":"jaeger-dependencies-000002","CreationTime":"2024-07-07T15:37:36.53Z","Aliases":{"jaeger-dependencies-read":true,"jaeger-dependencies-write":true}},{"Index":"jaeger-service-000001","CreationTime":"2024-07-07T15:37:35.866Z","Aliases":{"jaeger-service-read":true}},{"Index":"jaeger-service-000002","CreationTime":"2024-07-07T15:37:36.386Z","Aliases":{"jaeger-service-read":true,"jaeger-service-write":true}},{"Index":"jaeger-span-000001","CreationTime":"2024-07-07T15:37:35.74Z","Aliases":{"jaeger-span-read":true}}]}
+{"level":"info","ts":1720366656.78981,"caller":"es-index-cleaner/main.go:102","msg":"No indices to delete"}
+
+--- ✅ PASS: TestIndexCleaner_doNotFailOnFullStorage (8.79s)
+=== RUN   TestIndexCleaner
+=== RUN   TestIndexCleaner/RemoveDailyIndices_no_prefix,_[]
+
+
+
+
+{"level":"info","ts":1720366659.1464531,"caller":"es-index-cleaner/main.go:89","msg":"Indices before this date will be deleted","date":"2024-07-08T00:00:00Z"}
+{"level":"info","ts":1720366659.1464825,"caller":"es-index-cleaner/main.go:98","msg":"Queried indices","indices":[{"Index":"jaeger-span-archive-000001","CreationTime":"2024-07-07T15:37:37.501Z","Aliases":{"jaeger-span-archive-read":true}},{"Index":"jaeger-dependencies-000002","CreationTime":"2024-07-07T15:37:38.873Z","Aliases":{"jaeger-dependencies-read":true,"jaeger-dependencies-write":true}},{"Index":"jaeger-dependencies-2019-01-01","CreationTime":"2024-07-07T15:37:37.122Z","Aliases":{}},{"Index":"jaeger-sampling-2019-01-01","CreationTime":"2024-07-07T15:37:37.218Z","Aliases":{}},{"Index":"jaeger-service-000001","CreationTime":"2024-07-07T15:37:38.212Z","Aliases":{"jaeger-service-read":true}},{"Index":"jaeger-service-000002","CreationTime":"2024-07-07T15:37:38.735Z","Aliases":{"jaeger-service-read":true,"jaeger-service-write":true}},{"Index":"jaeger-span-archive","CreationTime":"2024-07-07T15:37:37.261Z","Aliases":{}},{"Index":"jaeger-span-archive-000002","CreationTime":"2024-07-07T15:37:37.784Z","Aliases":{"jaeger-span-archive-read":true,"jaeger-span-archive-write":true}},{"Index":"jaeger-dependencies-000001","CreationTime":"2024-07-07T15:37:38.338Z","Aliases":{"jaeger-dependencies-read":true}},{"Index":"jaeger-service-2019-01-01","CreationTime":"2024-07-07T15:37:37.03Z","Aliases":{}},{"Index":"jaeger-span-000001","CreationTime":"2024-07-07T15:37:38.084Z","Aliases":{"jaeger-span-read":true}},{"Index":"jaeger-span-000002","CreationTime":"2024-07-07T15:37:38.613Z","Aliases":{"jaeger-span-read":true,"jaeger-span-write":true}},{"Index":"jaeger-span-2019-01-01","CreationTime":"2024-07-07T15:37:36.931Z","Aliases":{}}]}
+{"level":"info","ts":1720366659.1469204,"caller":"es-index-cleaner/main.go:105","msg":"Deleting indices","indices":[{"Index":"jaeger-dependencies-2019-01-01","CreationTime":"2024-07-07T15:37:37.122Z","Aliases":{}},{"Index":"jaeger-sampling-2019-01-01","CreationTime":"2024-07-07T15:37:37.218Z","Aliases":{}},{"Index":"jaeger-service-2019-01-01","CreationTime":"2024-07-07T15:37:37.03Z","Aliases":{}},{"Index":"jaeger-span-2019-01-01","CreationTime":"2024-07-07T15:37:36.931Z","Aliases":{}}]}
+
+=== RUN   TestIndexCleaner/RemoveDailyIndices_prefix,_[]
+
+
+
+
+{"level":"info","ts":1720366661.402792,"caller":"es-index-cleaner/main.go:89","msg":"Indices before this date will be deleted","date":"2024-07-08T00:00:00Z"}
+{"level":"info","ts":1720366661.4033117,"caller":"es-index-cleaner/main.go:98","msg":"Queried indices","indices":[{"Index":"integration-test-jaeger-span-archive-000002","CreationTime":"2024-07-07T15:37:40.032Z","Aliases":{"integration-test-jaeger-span-archive-read":true,"integration-test-jaeger-span-archive-write":true}},{"Index":"integration-test-jaeger-dependencies-000002","CreationTime":"2024-07-07T15:37:41.126Z","Aliases":{"integration-test-jaeger-dependencies-read":true,"integration-test-jaeger-dependencies-write":true}},{"Index":"integration-test-jaeger-dependencies-2019-01-01","CreationTime":"2024-07-07T15:37:39.524Z","Aliases":{}},{"Index":"integration-test-jaeger-sampling-2019-01-01","CreationTime":"2024-07-07T15:37:39.565Z","Aliases":{}},{"Index":"integration-test-jaeger-span-000001","CreationTime":"2024-07-07T15:37:40.305Z","Aliases":{"integration-test-jaeger-span-read":true}},{"Index":"integration-test-jaeger-span-2019-01-01","CreationTime":"2024-07-07T15:37:39.436Z","Aliases":{}},{"Index":"integration-test-jaeger-span-archive","CreationTime":"2024-07-07T15:37:39.607Z","Aliases":{}},{"Index":"integration-test-jaeger-dependencies-000001","CreationTime":"2024-07-07T15:37:40.586Z","Aliases":{"integration-test-jaeger-dependencies-read":true}},{"Index":"integration-test-jaeger-service-000001","CreationTime":"2024-07-07T15:37:40.441Z","Aliases":{"integration-test-jaeger-service-read":true}},{"Index":"integration-test-jaeger-service-000002","CreationTime":"2024-07-07T15:37:41Z","Aliases":{"integration-test-jaeger-service-read":true,"integration-test-jaeger-service-write":true}},{"Index":"integration-test-jaeger-service-2019-01-01","CreationTime":"2024-07-07T15:37:39.479Z","Aliases":{}},{"Index":"integration-test-jaeger-span-000002","CreationTime":"2024-07-07T15:37:40.886Z","Aliases":{"integration-test-jaeger-span-read":true,"integration-test-jaeger-span-write":true}},{"Index":"integration-test-jaeger-span-archive-000001","CreationTime":"2024-07-07T15:37:39.776Z","Aliases":{"integration-test-jaeger-span-archive-read":true}}]}
+{"level":"info","ts":1720366661.4035149,"caller":"es-index-cleaner/main.go:105","msg":"Deleting indices","indices":[{"Index":"integration-test-jaeger-dependencies-2019-01-01","CreationTime":"2024-07-07T15:37:39.524Z","Aliases":{}},{"Index":"integration-test-jaeger-sampling-2019-01-01","CreationTime":"2024-07-07T15:37:39.565Z","Aliases":{}},{"Index":"integration-test-jaeger-span-2019-01-01","CreationTime":"2024-07-07T15:37:39.436Z","Aliases":{}},{"Index":"integration-test-jaeger-service-2019-01-01","CreationTime":"2024-07-07T15:37:39.479Z","Aliases":{}}]}
+
+=== RUN   TestIndexCleaner/RemoveRolloverIndices_no_prefix,_[ROLLOVER=true]
+
+
+
+
+{"level":"info","ts":1720366663.6885583,"caller":"es-index-cleaner/main.go:89","msg":"Indices before this date will be deleted","date":"2024-07-08T00:00:00Z"}
+{"level":"info","ts":1720366663.6885886,"caller":"es-index-cleaner/main.go:98","msg":"Queried indices","indices":[{"Index":"jaeger-service-000002","CreationTime":"2024-07-07T15:37:43.226Z","Aliases":{"jaeger-service-read":true,"jaeger-service-write":true}},{"Index":"jaeger-span-000002","CreationTime":"2024-07-07T15:37:43.112Z","Aliases":{"jaeger-span-read":true,"jaeger-span-write":true}},{"Index":"jaeger-span-2019-01-01","CreationTime":"2024-07-07T15:37:41.657Z","Aliases":{}},{"Index":"jaeger-span-archive","CreationTime":"2024-07-07T15:37:41.826Z","Aliases":{}},{"Index":"jaeger-dependencies-000002","CreationTime":"2024-07-07T15:37:43.346Z","Aliases":{"jaeger-dependencies-read":true,"jaeger-dependencies-write":true}},{"Index":"jaeger-sampling-2019-01-01","CreationTime":"2024-07-07T15:37:41.784Z","Aliases":{}},{"Index":"jaeger-service-000001","CreationTime":"2024-07-07T15:37:42.69Z","Aliases":{"jaeger-service-read":true}},{"Index":"jaeger-service-2019-01-01","CreationTime":"2024-07-07T15:37:41.701Z","Aliases":{}},{"Index":"jaeger-span-000001","CreationTime":"2024-07-07T15:37:42.548Z","Aliases":{"jaeger-span-read":true}},{"Index":"jaeger-span-archive-000001","CreationTime":"2024-07-07T15:37:41.999Z","Aliases":{"jaeger-span-archive-read":true}},{"Index":"jaeger-span-archive-000002","CreationTime":"2024-07-07T15:37:42.263Z","Aliases":{"jaeger-span-archive-read":true,"jaeger-span-archive-write":true}},{"Index":"jaeger-dependencies-000001","CreationTime":"2024-07-07T15:37:42.833Z","Aliases":{"jaeger-dependencies-read":true}},{"Index":"jaeger-dependencies-2019-01-01","CreationTime":"2024-07-07T15:37:41.742Z","Aliases":{}}]}
+{"level":"info","ts":1720366663.688702,"caller":"es-index-cleaner/main.go:105","msg":"Deleting indices","indices":[{"Index":"jaeger-service-000001","CreationTime":"2024-07-07T15:37:42.69Z","Aliases":{"jaeger-service-read":true}},{"Index":"jaeger-span-000001","CreationTime":"2024-07-07T15:37:42.548Z","Aliases":{"jaeger-span-read":true}},{"Index":"jaeger-dependencies-000001","CreationTime":"2024-07-07T15:37:42.833Z","Aliases":{"jaeger-dependencies-read":true}}]}
+
+=== RUN   TestIndexCleaner/RemoveRolloverIndices_prefix,_[ROLLOVER=true]
+
+
+
+
+{"level":"info","ts":1720366665.8383224,"caller":"es-index-cleaner/main.go:89","msg":"Indices before this date will be deleted","date":"2024-07-08T00:00:00Z"}
+{"level":"info","ts":1720366665.8383608,"caller":"es-index-cleaner/main.go:98","msg":"Queried indices","indices":[{"Index":"integration-test-jaeger-dependencies-2019-01-01","CreationTime":"2024-07-07T15:37:44.018Z","Aliases":{}},{"Index":"integration-test-jaeger-sampling-2019-01-01","CreationTime":"2024-07-07T15:37:44.06Z","Aliases":{}},{"Index":"integration-test-jaeger-service-000002","CreationTime":"2024-07-07T15:37:45.459Z","Aliases":{"integration-test-jaeger-service-read":true,"integration-test-jaeger-service-write":true}},{"Index":"integration-test-jaeger-span-2019-01-01","CreationTime":"2024-07-07T15:37:43.941Z","Aliases":{}},{"Index":"integration-test-jaeger-span-archive","CreationTime":"2024-07-07T15:37:44.099Z","Aliases":{}},{"Index":"integration-test-jaeger-dependencies-000001","CreationTime":"2024-07-07T15:37:45.071Z","Aliases":{"integration-test-jaeger-dependencies-read":true}},{"Index":"integration-test-jaeger-dependencies-000002","CreationTime":"2024-07-07T15:37:45.57Z","Aliases":{"integration-test-jaeger-dependencies-read":true,"integration-test-jaeger-dependencies-write":true}},{"Index":"integration-test-jaeger-service-000001","CreationTime":"2024-07-07T15:37:44.936Z","Aliases":{"integration-test-jaeger-service-read":true}},{"Index":"integration-test-jaeger-service-2019-01-01","CreationTime":"2024-07-07T15:37:43.98Z","Aliases":{}},{"Index":"integration-test-jaeger-span-000001","CreationTime":"2024-07-07T15:37:44.803Z","Aliases":{"integration-test-jaeger-span-read":true}},{"Index":"integration-test-jaeger-span-000002","CreationTime":"2024-07-07T15:37:45.337Z","Aliases":{"integration-test-jaeger-span-read":true,"integration-test-jaeger-span-write":true}},{"Index":"integration-test-jaeger-span-archive-000001","CreationTime":"2024-07-07T15:37:44.273Z","Aliases":{"integration-test-jaeger-span-archive-read":true}},{"Index":"integration-test-jaeger-span-archive-000002","CreationTime":"2024-07-07T15:37:44.541Z","Aliases":{"integration-test-jaeger-span-archive-read":true,"integration-test-jaeger-span-archive-write":true}}]}
+{"level":"info","ts":1720366665.8385081,"caller":"es-index-cleaner/main.go:105","msg":"Deleting indices","indices":[{"Index":"integration-test-jaeger-dependencies-000001","CreationTime":"2024-07-07T15:37:45.071Z","Aliases":{"integration-test-jaeger-dependencies-read":true}},{"Index":"integration-test-jaeger-service-000001","CreationTime":"2024-07-07T15:37:44.936Z","Aliases":{"integration-test-jaeger-service-read":true}},{"Index":"integration-test-jaeger-span-000001","CreationTime":"2024-07-07T15:37:44.803Z","Aliases":{"integration-test-jaeger-span-read":true}}]}
+
+=== RUN   TestIndexCleaner/RemoveArchiveIndices_no_prefix,_[ARCHIVE=true]
+
+
+
+
+{"level":"info","ts":1720366668.0127225,"caller":"es-index-cleaner/main.go:89","msg":"Indices before this date will be deleted","date":"2024-07-08T00:00:00Z"}
+{"level":"info","ts":1720366668.0127556,"caller":"es-index-cleaner/main.go:98","msg":"Queried indices","indices":[{"Index":"jaeger-span-000002","CreationTime":"2024-07-07T15:37:47.447Z","Aliases":{"jaeger-span-read":true,"jaeger-span-write":true}},{"Index":"jaeger-span-2019-01-01","CreationTime":"2024-07-07T15:37:46.087Z","Aliases":{}},{"Index":"jaeger-span-archive","CreationTime":"2024-07-07T15:37:46.239Z","Aliases":{}},{"Index":"jaeger-span-archive-000001","CreationTime":"2024-07-07T15:37:46.412Z","Aliases":{"jaeger-span-archive-read":true}},{"Index":"jaeger-dependencies-000002","CreationTime":"2024-07-07T15:37:47.723Z","Aliases":{"jaeger-dependencies-read":true,"jaeger-dependencies-write":true}},{"Index":"jaeger-sampling-2019-01-01","CreationTime":"2024-07-07T15:37:46.199Z","Aliases":{}},{"Index":"jaeger-span-000001","CreationTime":"2024-07-07T15:37:46.914Z","Aliases":{"jaeger-span-read":true}},{"Index":"jaeger-service-000002","CreationTime":"2024-07-07T15:37:47.588Z","Aliases":{"jaeger-service-read":true,"jaeger-service-write":true}},{"Index":"jaeger-service-2019-01-01","CreationTime":"2024-07-07T15:37:46.126Z","Aliases":{}},{"Index":"jaeger-span-archive-000002","CreationTime":"2024-07-07T15:37:46.661Z","Aliases":{"jaeger-span-archive-read":true,"jaeger-span-archive-write":true}},{"Index":"jaeger-dependencies-000001","CreationTime":"2024-07-07T15:37:47.178Z","Aliases":{"jaeger-dependencies-read":true}},{"Index":"jaeger-dependencies-2019-01-01","CreationTime":"2024-07-07T15:37:46.162Z","Aliases":{}},{"Index":"jaeger-service-000001","CreationTime":"2024-07-07T15:37:47.049Z","Aliases":{"jaeger-service-read":true}}]}
+{"level":"info","ts":1720366668.0128624,"caller":"es-index-cleaner/main.go:105","msg":"Deleting indices","indices":[{"Index":"jaeger-span-archive-000001","CreationTime":"2024-07-07T15:37:46.412Z","Aliases":{"jaeger-span-archive-read":true}}]}
+
+=== RUN   TestIndexCleaner/RemoveArchiveIndices_prefix,_[ARCHIVE=true]
+
+
+
+
+{"level":"info","ts":1720366670.1258612,"caller":"es-index-cleaner/main.go:89","msg":"Indices before this date will be deleted","date":"2024-07-08T00:00:00Z"}
+{"level":"info","ts":1720366670.1259065,"caller":"es-index-cleaner/main.go:98","msg":"Queried indices","indices":[{"Index":"integration-test-jaeger-span-archive-000002","CreationTime":"2024-07-07T15:37:48.836Z","Aliases":{"integration-test-jaeger-span-archive-read":true,"integration-test-jaeger-span-archive-write":true}},{"Index":"integration-test-jaeger-service-2019-01-01","CreationTime":"2024-07-07T15:37:48.286Z","Aliases":{}},{"Index":"integration-test-jaeger-span-000001","CreationTime":"2024-07-07T15:37:49.105Z","Aliases":{"integration-test-jaeger-span-read":true}},{"Index":"integration-test-jaeger-span-000002","CreationTime":"2024-07-07T15:37:49.633Z","Aliases":{"integration-test-jaeger-span-read":true,"integration-test-jaeger-span-write":true}},{"Index":"integration-test-jaeger-span-2019-01-01","CreationTime":"2024-07-07T15:37:48.251Z","Aliases":{}},{"Index":"integration-test-jaeger-service-000001","CreationTime":"2024-07-07T15:37:49.232Z","Aliases":{"integration-test-jaeger-service-read":true}},{"Index":"integration-test-jaeger-service-000002","CreationTime":"2024-07-07T15:37:49.745Z","Aliases":{"integration-test-jaeger-service-read":true,"integration-test-jaeger-service-write":true}},{"Index":"integration-test-jaeger-span-archive","CreationTime":"2024-07-07T15:37:48.41Z","Aliases":{}},{"Index":"integration-test-jaeger-span-archive-000001","CreationTime":"2024-07-07T15:37:48.574Z","Aliases":{"integration-test-jaeger-span-archive-read":true}},{"Index":"integration-test-jaeger-dependencies-000001","CreationTime":"2024-07-07T15:37:49.367Z","Aliases":{"integration-test-jaeger-dependencies-read":true}},{"Index":"integration-test-jaeger-dependencies-000002","CreationTime":"2024-07-07T15:37:49.851Z","Aliases":{"integration-test-jaeger-dependencies-read":true,"integration-test-jaeger-dependencies-write":true}},{"Index":"integration-test-jaeger-dependencies-2019-01-01","CreationTime":"2024-07-07T15:37:48.324Z","Aliases":{}},{"Index":"integration-test-jaeger-sampling-2019-01-01","CreationTime":"2024-07-07T15:37:48.368Z","Aliases":{}}]}
+{"level":"info","ts":1720366670.1260457,"caller":"es-index-cleaner/main.go:105","msg":"Deleting indices","indices":[{"Index":"integration-test-jaeger-span-archive-000001","CreationTime":"2024-07-07T15:37:48.574Z","Aliases":{"integration-test-jaeger-span-archive-read":true}}]}
+T15:38:02 make index-cleaner-integration-test
+
+=== RUN   TestIndexCleaner/RemoveDailyIndices_with_adaptiveSampling_no_prefix,_[]
+
+
+
+
+{"level":"info","ts":1720366672.497407,"caller":"es-index-cleaner/main.go:89","msg":"Indices before this date will be deleted","date":"2024-07-08T00:00:00Z"}
+{"level":"info","ts":1720366672.4974356,"caller":"es-index-cleaner/main.go:98","msg":"Queried indices","indices":[{"Index":"jaeger-span-archive-000002","CreationTime":"2024-07-07T15:37:50.953Z","Aliases":{"jaeger-span-archive-read":true,"jaeger-span-archive-write":true}},{"Index":"jaeger-sampling-000002","CreationTime":"2024-07-07T15:37:52.229Z","Aliases":{"jaeger-sampling-read":true,"jaeger-sampling-write":true}},{"Index":"jaeger-service-2019-01-01","CreationTime":"2024-07-07T15:37:50.392Z","Aliases":{}},{"Index":"jaeger-span-000001","CreationTime":"2024-07-07T15:37:51.216Z","Aliases":{"jaeger-span-read":true}},{"Index":"jaeger-span-archive-000001","CreationTime":"2024-07-07T15:37:50.695Z","Aliases":{"jaeger-span-archive-read":true}},{"Index":"jaeger-dependencies-2019-01-01","CreationTime":"2024-07-07T15:37:50.43Z","Aliases":{}},{"Index":"jaeger-service-000002","CreationTime":"2024-07-07T15:37:51.997Z","Aliases":{"jaeger-service-read":true,"jaeger-service-write":true}},{"Index":"jaeger-span-archive","CreationTime":"2024-07-07T15:37:50.507Z","Aliases":{}},{"Index":"jaeger-dependencies-000002","CreationTime":"2024-07-07T15:37:52.107Z","Aliases":{"jaeger-dependencies-read":true,"jaeger-dependencies-write":true}},{"Index":"jaeger-sampling-000001","CreationTime":"2024-07-07T15:37:51.582Z","Aliases":{"jaeger-sampling-read":true}},{"Index":"jaeger-sampling-2019-01-01","CreationTime":"2024-07-07T15:37:50.468Z","Aliases":{}},{"Index":"jaeger-span-2019-01-01","CreationTime":"2024-07-07T15:37:50.353Z","Aliases":{}},{"Index":"jaeger-dependencies-000001","CreationTime":"2024-07-07T15:37:51.455Z","Aliases":{"jaeger-dependencies-read":true}},{"Index":"jaeger-service-000001","CreationTime":"2024-07-07T15:37:51.334Z","Aliases":{"jaeger-service-read":true}},{"Index":"jaeger-span-000002","CreationTime":"2024-07-07T15:37:51.874Z","Aliases":{"jaeger-span-read":true,"jaeger-span-write":true}}]}
+{"level":"info","ts":1720366672.4975402,"caller":"es-index-cleaner/main.go:105","msg":"Deleting indices","indices":[{"Index":"jaeger-service-2019-01-01","CreationTime":"2024-07-07T15:37:50.392Z","Aliases":{}},{"Index":"jaeger-dependencies-2019-01-01","CreationTime":"2024-07-07T15:37:50.43Z","Aliases":{}},{"Index":"jaeger-sampling-2019-01-01","CreationTime":"2024-07-07T15:37:50.468Z","Aliases":{}},{"Index":"jaeger-span-2019-01-01","CreationTime":"2024-07-07T15:37:50.353Z","Aliases":{}}]}
+
+=== RUN   TestIndexCleaner/RemoveDailyIndices_with_adaptiveSampling_prefix,_[]
+
+
+
+
+{"level":"info","ts":1720366674.887541,"caller":"es-index-cleaner/main.go:89","msg":"Indices before this date will be deleted","date":"2024-07-08T00:00:00Z"}
+{"level":"info","ts":1720366674.8875825,"caller":"es-index-cleaner/main.go:98","msg":"Queried indices","indices":[{"Index":"integration-test-jaeger-service-000001","CreationTime":"2024-07-07T15:37:53.736Z","Aliases":{"integration-test-jaeger-service-read":true}},{"Index":"integration-test-jaeger-service-000002","CreationTime":"2024-07-07T15:37:54.383Z","Aliases":{"integration-test-jaeger-service-read":true,"integration-test-jaeger-service-write":true}},{"Index":"integration-test-jaeger-service-2019-01-01","CreationTime":"2024-07-07T15:37:52.8Z","Aliases":{}},{"Index":"integration-test-jaeger-span-000001","CreationTime":"2024-07-07T15:37:53.607Z","Aliases":{"integration-test-jaeger-span-read":true}},{"Index":"integration-test-jaeger-dependencies-000002","CreationTime":"2024-07-07T15:37:54.5Z","Aliases":{"integration-test-jaeger-dependencies-read":true,"integration-test-jaeger-dependencies-write":true}},{"Index":"integration-test-jaeger-sampling-2019-01-01","CreationTime":"2024-07-07T15:37:52.867Z","Aliases":{}},{"Index":"integration-test-jaeger-span-archive-000002","CreationTime":"2024-07-07T15:37:53.335Z","Aliases":{"integration-test-jaeger-span-archive-read":true,"integration-test-jaeger-span-archive-write":true}},{"Index":"integration-test-jaeger-sampling-000001","CreationTime":"2024-07-07T15:37:54.006Z","Aliases":{"integration-test-jaeger-sampling-read":true}},{"Index":"integration-test-jaeger-span-2019-01-01","CreationTime":"2024-07-07T15:37:52.762Z","Aliases":{}},{"Index":"integration-test-jaeger-span-archive","CreationTime":"2024-07-07T15:37:52.903Z","Aliases":{}},{"Index":"integration-test-jaeger-dependencies-000001","CreationTime":"2024-07-07T15:37:53.862Z","Aliases":{"integration-test-jaeger-dependencies-read":true}},{"Index":"integration-test-jaeger-dependencies-2019-01-01","CreationTime":"2024-07-07T15:37:52.834Z","Aliases":{}},{"Index":"integration-test-jaeger-sampling-000002","CreationTime":"2024-07-07T15:37:54.62Z","Aliases":{"integration-test-jaeger-sampling-read":true,"integration-test-jaeger-sampling-write":true}},{"Index":"integration-test-jaeger-span-000002","CreationTime":"2024-07-07T15:37:54.265Z","Aliases":{"integration-test-jaeger-span-read":true,"integration-test-jaeger-span-write":true}},{"Index":"integration-test-jaeger-span-archive-000001","CreationTime":"2024-07-07T15:37:53.073Z","Aliases":{"integration-test-jaeger-span-archive-read":true}}]}
+{"level":"info","ts":1720366674.8877876,"caller":"es-index-cleaner/main.go:105","msg":"Deleting indices","indices":[{"Index":"integration-test-jaeger-service-2019-01-01","CreationTime":"2024-07-07T15:37:52.8Z","Aliases":{}},{"Index":"integration-test-jaeger-sampling-2019-01-01","CreationTime":"2024-07-07T15:37:52.867Z","Aliases":{}},{"Index":"integration-test-jaeger-span-2019-01-01","CreationTime":"2024-07-07T15:37:52.762Z","Aliases":{}},{"Index":"integration-test-jaeger-dependencies-2019-01-01","CreationTime":"2024-07-07T15:37:52.834Z","Aliases":{}}]}
+
+--- ✅ PASS: TestIndexCleaner (18.14s)
+    --- ✅ PASS: TestIndexCleaner/RemoveDailyIndices_no_prefix,_[] (2.42s)
+    --- ✅ PASS: TestIndexCleaner/RemoveDailyIndices_prefix,_[] (2.24s)
+    --- ✅ PASS: TestIndexCleaner/RemoveRolloverIndices_no_prefix,_[ROLLOVER=true] (2.30s)
+    --- ✅ PASS: TestIndexCleaner/RemoveRolloverIndices_prefix,_[ROLLOVER=true] (2.15s)
+    --- ✅ PASS: TestIndexCleaner/RemoveArchiveIndices_no_prefix,_[ARCHIVE=true] (2.16s)
+    --- ✅ PASS: TestIndexCleaner/RemoveArchiveIndices_prefix,_[ARCHIVE=true] (2.12s)
+    --- ✅ PASS: TestIndexCleaner/RemoveDailyIndices_with_adaptiveSampling_no_prefix,_[] (2.37s)
+    --- ✅ PASS: TestIndexCleaner/RemoveDailyIndices_with_adaptiveSampling_prefix,_[] (2.39s)
+=== RUN   TestIndexRollover_FailIfILMNotPresent
+Error: ILM policy jaeger-ilm-policy doesn't exist in Elasticsearch. Please create it and re-run init
+
+--- ✅ PASS: TestIndexRollover_FailIfILMNotPresent (0.37s)
+=== RUN   TestIndexRollover_CreateIndicesWithILM
+=== RUN   TestIndexRollover_CreateIndicesWithILM/DefaultPolicyName
+=== RUN   TestIndexRollover_CreateIndicesWithILM/DefaultPolicyName/NoPrefix
+
+=== RUN   TestIndexRollover_CreateIndicesWithILM/DefaultPolicyName/WithPrefix
+
+=== RUN   TestIndexRollover_CreateIndicesWithILM/DefaultPolicyName/WithAdaptiveSampling
+
+=== RUN   TestIndexRollover_CreateIndicesWithILM/SetPolicyName
+=== RUN   TestIndexRollover_CreateIndicesWithILM/SetPolicyName/NoPrefix
+
+=== RUN   TestIndexRollover_CreateIndicesWithILM/SetPolicyName/WithPrefix
+
+=== RUN   TestIndexRollover_CreateIndicesWithILM/SetPolicyName/WithAdaptiveSampling
+
+--- ✅ PASS: TestIndexRollover_CreateIndicesWithILM (5.90s)
+    --- ✅ PASS: TestIndexRollover_CreateIndicesWithILM/DefaultPolicyName (2.89s)
+        --- ✅ PASS: TestIndexRollover_CreateIndicesWithILM/DefaultPolicyName/NoPrefix (0.84s)
+        --- ✅ PASS: TestIndexRollover_CreateIndicesWithILM/DefaultPolicyName/WithPrefix (0.94s)
+        --- ✅ PASS: TestIndexRollover_CreateIndicesWithILM/DefaultPolicyName/WithAdaptiveSampling (1.12s)
+    --- ✅ PASS: TestIndexRollover_CreateIndicesWithILM/SetPolicyName (3.01s)
+        --- ✅ PASS: TestIndexRollover_CreateIndicesWithILM/SetPolicyName/NoPrefix (0.94s)
+        --- ✅ PASS: TestIndexRollover_CreateIndicesWithILM/SetPolicyName/WithPrefix (0.96s)
+        --- ✅ PASS: TestIndexRollover_CreateIndicesWithILM/SetPolicyName/WithAdaptiveSampling (1.11s)
+=== RUN   TestGRPCRemoteStorage
+    integration.go:109: This test requires environment variable STORAGE=grpc
+--- 🔕 SKIP: TestGRPCRemoteStorage (0.00s)
+=== RUN   TestKafkaStorage
+    integration.go:109: This test requires environment variable STORAGE=kafka
+--- 🔕 SKIP: TestKafkaStorage (0.00s)
+=== RUN   TestMemoryStorage
+    integration.go:109: This test requires environment variable STORAGE=memory
+--- 🔕 SKIP: TestMemoryStorage (0.00s)
+=== RUN   TestDedupeSpans
+--- ✅ PASS: TestDedupeSpans (0.00s)
+✅ PASS
+coverage: 8.7% of statements in ./...
+ok  	github.com/jaegertracing/jaeger/plugin/storage/integration	112.612s	coverage: 8.7% of statements in ./...
+docker buildx inspect jaeger-build > /dev/null || docker buildx create --use --name=jaeger-build --buildkitd-flags="--allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host" --driver-opt="network=host"
+docker inspect registry > /dev/null || docker run --rm -d -p 5000:5000 --name registry registry:2
+docker buildx build -t localhost:5000/baseimg_alpine:latest --push \
+	--platform=linux/amd64,linux/s390x,linux/ppc64le,linux/arm64 \
+	docker/base
+#0 building with "jaeger-build" instance using docker-container driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 278B done
+#1 DONE 0.0s
+
+#2 [linux/ppc64le internal] load metadata for docker.io/library/alpine:3.20.1
+#2 DONE 0.3s
+
+#3 [linux/arm64 internal] load metadata for docker.io/library/alpine:3.20.1
+#3 DONE 0.3s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [linux/s390x internal] load metadata for docker.io/library/alpine:3.20.1
+#5 DONE 0.3s
+
+#6 [linux/amd64 internal] load metadata for docker.io/library/alpine:3.20.1
+#6 DONE 0.3s
+
+#7 [linux/arm64 cert 1/2] FROM docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0
+#7 resolve docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0 done
+#7 DONE 0.0s
+
+#8 [linux/amd64 cert 1/2] FROM docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0
+#8 resolve docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0 done
+#8 DONE 0.0s
+
+#9 [linux/arm64 cert 2/2] RUN apk add --update --no-cache ca-certificates mailcap
+#9 CACHED
+
+#10 [linux/arm64 stage-1 2/3] COPY --from=cert /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+#10 CACHED
+
+#11 [linux/amd64 stage-1 2/3] COPY --from=cert /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+#11 CACHED
+
+#12 [linux/amd64 cert 2/2] RUN apk add --update --no-cache ca-certificates mailcap
+#12 CACHED
+
+#13 [linux/ppc64le cert 1/2] FROM docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0
+#13 resolve docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0 done
+#13 DONE 0.0s
+
+#14 [linux/amd64 stage-1 3/3] COPY --from=cert /etc/mime.types /etc/mime.types
+#14 CACHED
+
+#15 [linux/arm64 stage-1 3/3] COPY --from=cert /etc/mime.types /etc/mime.types
+#15 CACHED
+
+#16 [linux/ppc64le stage-1 2/3] COPY --from=cert /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+#16 CACHED
+
+#17 [linux/ppc64le cert 2/2] RUN apk add --update --no-cache ca-certificates mailcap
+#17 CACHED
+
+#18 [linux/ppc64le stage-1 3/3] COPY --from=cert /etc/mime.types /etc/mime.types
+#18 CACHED
+
+#19 [linux/s390x cert 1/2] FROM docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0
+#19 resolve docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0 0.0s done
+#19 DONE 0.0s
+
+#20 [linux/s390x cert 2/2] RUN apk add --update --no-cache ca-certificates mailcap
+#20 CACHED
+
+#21 [linux/s390x stage-1 2/3] COPY --from=cert /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+#21 CACHED
+
+#22 [linux/s390x stage-1 3/3] COPY --from=cert /etc/mime.types /etc/mime.types
+#22 CACHED
+
+#23 exporting to image
+#23 exporting layers done
+#23 exporting manifest sha256:ca15c81946a55db36a094c4c428fc2bac136d23c1c4fced818cd9986cd432384 done
+#23 exporting config sha256:04ad517c1acbb3b92050405fa277902edc60fc6a3b41954430f7edc5a4938a60 done
+#23 exporting attestation manifest sha256:c78763b4e60d5e18ff5f55d9c094a3d17ae52ad195074058ac0b7ec35f010c7f done
+#23 exporting manifest sha256:37582d3c4c6ae9383609cf29d9beabd491f707761242b7ca0aa2a1ed9e674b9f done
+#23 exporting config sha256:96be41ed6b676acb188bee73d0213434779ba43ca940a830915ad81b13e2da13 done
+#23 exporting attestation manifest sha256:d45f755bd48f42125417d6899177c6f2f235f642e81e76c4cb3daa6b30545e1a done
+#23 exporting manifest sha256:10c083282e1c81644104a9edff389aebe81dbcd12104dbc94d76d00c8000b7a1 done
+#23 exporting config sha256:6d110905aeb3e2530c1298c87f1c7a30d9dffd6a0e5bdb8201d5751e09c50cc3 done
+#23 exporting attestation manifest sha256:6cd11101a54b835995870390195897c7bcf293df44370753fb72490984da9ea2 done
+#23 exporting manifest sha256:451c466bfc53b9516134d6da65f219b2475f0d710cb932285ad59e4cf750a70c done
+#23 exporting config sha256:4912f38c7e2edea4bdb50af84e9e89e247dbc38193854fc1d5aa95a19b483f11 done
+#23 exporting attestation manifest sha256:9d355eb1613db9957a3ac03aa29714a7bb0b3707df23bf77a8209b91ddb4548e done
+#23 exporting manifest list sha256:1c6776053342eee53eaeaae5364ab12691fe63ca670202ba408701bab9ffd5f2 done
+#23 pushing layers 0.0s done
+#23 pushing manifest for localhost:5000/baseimg_alpine:latest@sha256:1c6776053342eee53eaeaae5364ab12691fe63ca670202ba408701bab9ffd5f2
+#23 pushing manifest for localhost:5000/baseimg_alpine:latest@sha256:1c6776053342eee53eaeaae5364ab12691fe63ca670202ba408701bab9ffd5f2 0.0s done
+#23 DONE 0.1s
+GOOS=linux GOARCH=amd64 make build-esmapping-generator
+make[1]: Entering directory '/home/runner/work/jaeger/jaeger'
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath -o ./plugin/storage/es/esmapping-generator-linux-amd64 -ldflags "-X github.com/jaegertracing/jaeger/pkg/version.commitSHA=8e02c108586d17eaa53d2390df600bff8d5425e8 -X github.com/jaegertracing/jaeger/pkg/version.latestVersion=v1.58.0 -X github.com/jaegertracing/jaeger/pkg/version.date=2024-07-07T15:29:10Z" ./cmd/esmapping-generator/
+make[1]: Leaving directory '/home/runner/work/jaeger/jaeger'
+GOOS=linux GOARCH=amd64 make build-es-index-cleaner
+make[1]: Entering directory '/home/runner/work/jaeger/jaeger'
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath -o ./cmd/es-index-cleaner/es-index-cleaner-linux-amd64 ./cmd/es-index-cleaner/
+make[1]: Leaving directory '/home/runner/work/jaeger/jaeger'
+GOOS=linux GOARCH=amd64 make build-es-rollover
+make[1]: Entering directory '/home/runner/work/jaeger/jaeger'
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath -o ./cmd/es-rollover/es-rollover-linux-amd64 ./cmd/es-rollover/
+make[1]: Leaving directory '/home/runner/work/jaeger/jaeger'
+docker build -t jaegertracing/jaeger-es-index-cleaner:latest --build-arg base_image=localhost:5000/baseimg_alpine:latest --build-arg TARGETARCH=amd64 cmd/es-index-cleaner
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 251B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for localhost:5000/baseimg_alpine:latest
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/2] FROM localhost:5000/baseimg_alpine:latest@sha256:1c6776053342eee53eaeaae5364ab12691fe63ca670202ba408701bab9ffd5f2
+#4 resolve localhost:5000/baseimg_alpine:latest@sha256:1c6776053342eee53eaeaae5364ab12691fe63ca670202ba408701bab9ffd5f2 done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 13.19MB 0.0s done
+#5 DONE 0.1s
+
+#6 [2/2] COPY es-index-cleaner-linux-amd64 /go/bin/es-index-cleaner-linux
+#6 CACHED
+
+#7 exporting to image
+#7 exporting layers done
+#7 writing image sha256:b9af0f9fb856fb62667f578a7d639473be668b7bc83ed39d18f23d8885a550bf done
+#7 naming to docker.io/jaegertracing/jaeger-es-index-cleaner:latest done
+#7 DONE 0.0s
+docker build -t jaegertracing/jaeger-es-rollover:latest --build-arg base_image=localhost:5000/baseimg_alpine:latest --build-arg TARGETARCH=amd64 cmd/es-rollover
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 224B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for localhost:5000/baseimg_alpine:latest
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/2] FROM localhost:5000/baseimg_alpine:latest@sha256:1c6776053342eee53eaeaae5364ab12691fe63ca670202ba408701bab9ffd5f2
+#4 resolve localhost:5000/baseimg_alpine:latest@sha256:1c6776053342eee53eaeaae5364ab12691fe63ca670202ba408701bab9ffd5f2 done
+#4 CACHED
+
+#5 [internal] load build context
+#5 transferring context: 13.68MB 0.1s done
+#5 DONE 0.1s
+
+#6 [2/2] COPY es-rollover-linux-amd64 /go/bin/es-rollover
+#6 DONE 0.1s
+
+#7 exporting to image
+#7 exporting layers
+#7 exporting layers 0.8s done
+#7 writing image sha256:386b4f91e4166c9953198c602117ecc736982568050b864544073bd021138741 done
+#7 naming to docker.io/jaegertracing/jaeger-es-rollover:latest done
+#7 DONE 0.8s
+Finished building jaeger-es-indices-clean ==============
+make storage-integration-test COVEROUT=cover-index-cleaner.out
+make[1]: Entering directory '/home/runner/work/jaeger/jaeger'
+# Expire tests results for storage integration tests since the environment might change
+# even though the code remains the same.
+go clean -testcache
+bash -c "set -e; set -o pipefail; go test -race -v -coverpkg=./... -coverprofile cover-index-cleaner.out ./plugin/storage/integration/... | sed 's/PASS/✅ PASS/g' | sed 's/FAIL/❌ FAIL/g' | sed 's/SKIP/🔕 SKIP/g'"
+=== RUN   TestBadgerStorage
+    integration.go:109: This test requires environment variable STORAGE=badger
+--- 🔕 SKIP: TestBadgerStorage (0.00s)
+=== RUN   TestCassandraStorage
+    integration.go:109: This test requires environment variable STORAGE=cassandra
+--- 🔕 SKIP: TestCassandraStorage (0.00s)
+=== RUN   TestElasticsearchStorage
+    integration.go:109: This test requires environment variable STORAGE=elasticsearch|opensearch
+--- 🔕 SKIP: TestElasticsearchStorage (0.00s)
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields
+    integration.go:109: This test requires environment variable STORAGE=elasticsearch|opensearch
+--- 🔕 SKIP: TestElasticsearchStorage_AllTagsAsObjectFields (0.00s)
+=== RUN   TestElasticsearchStorage_IndexTemplates
+    integration.go:109: This test requires environment variable STORAGE=elasticsearch|opensearch
+--- 🔕 SKIP: TestElasticsearchStorage_IndexTemplates (0.00s)
+=== RUN   TestIndexCleaner_doNotFailOnEmptyStorage
+    integration.go:109: This test requires environment variable STORAGE=elasticsearch|opensearch
+--- 🔕 SKIP: TestIndexCleaner_doNotFailOnEmptyStorage (0.00s)
+=== RUN   TestIndexCleaner_doNotFailOnFullStorage
+    integration.go:109: This test requires environment variable STORAGE=elasticsearch|opensearch
+--- 🔕 SKIP: TestIndexCleaner_doNotFailOnFullStorage (0.00s)
+=== RUN   TestIndexCleaner
+    integration.go:109: This test requires environment variable STORAGE=elasticsearch|opensearch
+--- 🔕 SKIP: TestIndexCleaner (0.00s)
+=== RUN   TestIndexRollover_FailIfILMNotPresent
+    integration.go:109: This test requires environment variable STORAGE=elasticsearch|opensearch
+--- 🔕 SKIP: TestIndexRollover_FailIfILMNotPresent (0.00s)
+=== RUN   TestIndexRollover_CreateIndicesWithILM
+    integration.go:109: This test requires environment variable STORAGE=elasticsearch|opensearch
+--- 🔕 SKIP: TestIndexRollover_CreateIndicesWithILM (0.00s)
+=== RUN   TestGRPCRemoteStorage
+    integration.go:109: This test requires environment variable STORAGE=grpc
+--- 🔕 SKIP: TestGRPCRemoteStorage (0.00s)
+=== RUN   TestKafkaStorage
+    integration.go:109: This test requires environment variable STORAGE=kafka
+--- 🔕 SKIP: TestKafkaStorage (0.00s)
+=== RUN   TestMemoryStorage
+    integration.go:109: This test requires environment variable STORAGE=memory
+--- 🔕 SKIP: TestMemoryStorage (0.00s)
+=== RUN   TestDedupeSpans
+--- ✅ PASS: TestDedupeSpans (0.00s)
+✅ PASS
+coverage: 0.5% of statements in ./...
+ok  	github.com/jaegertracing/jaeger/plugin/storage/integration	1.165s	coverage: 0.5% of statements in ./...
+T15:38:09 make index-rollover-integration-test
+make[1]: Leaving directory '/home/runner/work/jaeger/jaeger'
+docker buildx inspect jaeger-build > /dev/null || docker buildx create --use --name=jaeger-build --buildkitd-flags="--allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host" --driver-opt="network=host"
+docker inspect registry > /dev/null || docker run --rm -d -p 5000:5000 --name registry registry:2
+docker buildx build -t localhost:5000/baseimg_alpine:latest --push \
+	--platform=linux/amd64,linux/s390x,linux/ppc64le,linux/arm64 \
+	docker/base
+#0 building with "jaeger-build" instance using docker-container driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 278B done
+#1 DONE 0.0s
+
+#2 [linux/amd64 internal] load metadata for docker.io/library/alpine:3.20.1
+#2 ...
+
+#3 [linux/arm64 internal] load metadata for docker.io/library/alpine:3.20.1
+#3 DONE 0.3s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [linux/s390x internal] load metadata for docker.io/library/alpine:3.20.1
+#5 DONE 0.3s
+
+#2 [linux/amd64 internal] load metadata for docker.io/library/alpine:3.20.1
+#2 DONE 0.3s
+
+#6 [linux/ppc64le internal] load metadata for docker.io/library/alpine:3.20.1
+#6 DONE 0.3s
+
+#7 [linux/ppc64le cert 1/2] FROM docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0
+#7 resolve docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0 done
+#7 DONE 0.0s
+
+#8 [linux/arm64 cert 1/2] FROM docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0
+#8 resolve docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0 done
+#8 DONE 0.0s
+
+#9 [linux/ppc64le stage-1 2/3] COPY --from=cert /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+#9 CACHED
+
+#10 [linux/ppc64le cert 2/2] RUN apk add --update --no-cache ca-certificates mailcap
+#10 CACHED
+
+#11 [linux/ppc64le stage-1 3/3] COPY --from=cert /etc/mime.types /etc/mime.types
+#11 CACHED
+
+#12 [linux/arm64 cert 2/2] RUN apk add --update --no-cache ca-certificates mailcap
+#12 CACHED
+
+#13 [linux/arm64 stage-1 2/3] COPY --from=cert /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+#13 CACHED
+
+#14 [linux/arm64 stage-1 3/3] COPY --from=cert /etc/mime.types /etc/mime.types
+#14 CACHED
+
+#15 [linux/s390x cert 1/2] FROM docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0
+#15 resolve docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0 0.0s done
+#15 DONE 0.0s
+
+#16 [linux/s390x stage-1 2/3] COPY --from=cert /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+#16 CACHED
+
+#17 [linux/s390x cert 2/2] RUN apk add --update --no-cache ca-certificates mailcap
+#17 CACHED
+
+#18 [linux/s390x stage-1 3/3] COPY --from=cert /etc/mime.types /etc/mime.types
+#18 CACHED
+
+#19 [linux/amd64 cert 1/2] FROM docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0
+#19 resolve docker.io/library/alpine:3.20.1@sha256:b89d9c93e9ed3597455c90a0b88a8bbb5cb7188438f70953fede212a0c4394e0 0.0s done
+#19 DONE 0.0s
+
+#20 [linux/amd64 cert 2/2] RUN apk add --update --no-cache ca-certificates mailcap
+#20 CACHED
+
+#21 [linux/amd64 stage-1 2/3] COPY --from=cert /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+#21 CACHED
+
+#22 [linux/amd64 stage-1 3/3] COPY --from=cert /etc/mime.types /etc/mime.types
+#22 CACHED
+
+#23 exporting to image
+#23 exporting layers done
+#23 exporting manifest sha256:ca15c81946a55db36a094c4c428fc2bac136d23c1c4fced818cd9986cd432384 done
+#23 exporting config sha256:04ad517c1acbb3b92050405fa277902edc60fc6a3b41954430f7edc5a4938a60 done
+#23 exporting attestation manifest sha256:201ffb1c1d1018da4e889e5129f50d9bff0b485ab49d018fec805933a7cbf3f4 done
+#23 exporting manifest sha256:37582d3c4c6ae9383609cf29d9beabd491f707761242b7ca0aa2a1ed9e674b9f done
+#23 exporting config sha256:96be41ed6b676acb188bee73d0213434779ba43ca940a830915ad81b13e2da13 done
+#23 exporting attestation manifest sha256:bc49ba7513a30df10d9b5821cf5559a17070d3b552f82a7a7a037c22bdc41ed4 done
+#23 exporting manifest sha256:10c083282e1c81644104a9edff389aebe81dbcd12104dbc94d76d00c8000b7a1 done
+#23 exporting config sha256:6d110905aeb3e2530c1298c87f1c7a30d9dffd6a0e5bdb8201d5751e09c50cc3 done
+#23 exporting attestation manifest sha256:a40ff21260161b2ccc4e8b101a321d7f7960630cc9204a065708d81a0e943ff0 done
+#23 exporting manifest sha256:451c466bfc53b9516134d6da65f219b2475f0d710cb932285ad59e4cf750a70c done
+#23 exporting config sha256:4912f38c7e2edea4bdb50af84e9e89e247dbc38193854fc1d5aa95a19b483f11 done
+#23 exporting attestation manifest sha256:a19a65026fa4056cfd1e5cc329041b9b293504c622edd4bb4e126e5c0ee2e3bb done
+#23 exporting manifest list sha256:493affa5efa5aec3d5887c2f7ebc493144fad326e08300ad933ad4d76ecd3095
+#23 exporting manifest list sha256:493affa5efa5aec3d5887c2f7ebc493144fad326e08300ad933ad4d76ecd3095 done
+#23 pushing layers 0.0s done
+#23 pushing manifest for localhost:5000/baseimg_alpine:latest@sha256:493affa5efa5aec3d5887c2f7ebc493144fad326e08300ad933ad4d76ecd3095 0.0s done
+#23 DONE 0.1s
+GOOS=linux GOARCH=amd64 make build-esmapping-generator
+make[1]: Entering directory '/home/runner/work/jaeger/jaeger'
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath -o ./plugin/storage/es/esmapping-generator-linux-amd64 -ldflags "-X github.com/jaegertracing/jaeger/pkg/version.commitSHA=8e02c108586d17eaa53d2390df600bff8d5425e8 -X github.com/jaegertracing/jaeger/pkg/version.latestVersion=v1.58.0 -X github.com/jaegertracing/jaeger/pkg/version.date=2024-07-07T15:29:10Z" ./cmd/esmapping-generator/
+make[1]: Leaving directory '/home/runner/work/jaeger/jaeger'
+GOOS=linux GOARCH=amd64 make build-es-index-cleaner
+make[1]: Entering directory '/home/runner/work/jaeger/jaeger'
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath -o ./cmd/es-index-cleaner/es-index-cleaner-linux-amd64 ./cmd/es-index-cleaner/
+make[1]: Leaving directory '/home/runner/work/jaeger/jaeger'
+GOOS=linux GOARCH=amd64 make build-es-rollover
+make[1]: Entering directory '/home/runner/work/jaeger/jaeger'
+CGO_ENABLED=0 installsuffix=cgo go build -trimpath -o ./cmd/es-rollover/es-rollover-linux-amd64 ./cmd/es-rollover/
+make[1]: Leaving directory '/home/runner/work/jaeger/jaeger'
+docker build -t jaegertracing/jaeger-es-index-cleaner:latest --build-arg base_image=localhost:5000/baseimg_alpine:latest --build-arg TARGETARCH=amd64 cmd/es-index-cleaner
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 251B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for localhost:5000/baseimg_alpine:latest
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/2] FROM localhost:5000/baseimg_alpine:latest@sha256:493affa5efa5aec3d5887c2f7ebc493144fad326e08300ad933ad4d76ecd3095
+#4 resolve localhost:5000/baseimg_alpine:latest@sha256:493affa5efa5aec3d5887c2f7ebc493144fad326e08300ad933ad4d76ecd3095 done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 13.19MB 0.1s done
+#5 DONE 0.1s
+
+#6 [2/2] COPY es-index-cleaner-linux-amd64 /go/bin/es-index-cleaner-linux
+#6 CACHED
+
+#7 exporting to image
+#7 exporting layers done
+#7 writing image sha256:b9af0f9fb856fb62667f578a7d639473be668b7bc83ed39d18f23d8885a550bf done
+#7 naming to docker.io/jaegertracing/jaeger-es-index-cleaner:latest done
+#7 DONE 0.0s
+docker build -t jaegertracing/jaeger-es-rollover:latest --build-arg base_image=localhost:5000/baseimg_alpine:latest --build-arg TARGETARCH=amd64 cmd/es-rollover
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 224B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for localhost:5000/baseimg_alpine:latest
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/2] FROM localhost:5000/baseimg_alpine:latest@sha256:493affa5efa5aec3d5887c2f7ebc493144fad326e08300ad933ad4d76ecd3095
+#4 resolve localhost:5000/baseimg_alpine:latest@sha256:493affa5efa5aec3d5887c2f7ebc493144fad326e08300ad933ad4d76ecd3095 done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 13.68MB 0.1s done
+#5 DONE 0.1s
+
+#6 [2/2] COPY es-rollover-linux-amd64 /go/bin/es-rollover
+#6 CACHED
+
+#7 exporting to image
+#7 exporting layers done
+#7 writing image sha256:386b4f91e4166c9953198c602117ecc736982568050b864544073bd021138741 done
+#7 naming to docker.io/jaegertracing/jaeger-es-rollover:latest done
+#7 DONE 0.0s
+Finished building jaeger-es-indices-clean ==============
+make storage-integration-test COVEROUT=cover-index-rollover.out
+make[1]: Entering directory '/home/runner/work/jaeger/jaeger'
+# Expire tests results for storage integration tests since the environment might change
+# even though the code remains the same.
+go clean -testcache
+bash -c "set -e; set -o pipefail; go test -race -v -coverpkg=./... -coverprofile cover-index-rollover.out ./plugin/storage/integration/... | sed 's/PASS/✅ PASS/g' | sed 's/FAIL/❌ FAIL/g' | sed 's/SKIP/🔕 SKIP/g'"
+=== RUN   TestBadgerStorage
+    integration.go:109: This test requires environment variable STORAGE=badger
+--- 🔕 SKIP: TestBadgerStorage (0.00s)
+=== RUN   TestCassandraStorage
+    integration.go:109: This test requires environment variable STORAGE=cassandra
+--- 🔕 SKIP: TestCassandraStorage (0.00s)
+=== RUN   TestElasticsearchStorage
+    integration.go:109: This test requires environment variable STORAGE=elasticsearch|opensearch
+--- 🔕 SKIP: TestElasticsearchStorage (0.00s)
+=== RUN   TestElasticsearchStorage_AllTagsAsObjectFields
+    integration.go:109: This test requires environment variable STORAGE=elasticsearch|opensearch
+--- 🔕 SKIP: TestElasticsearchStorage_AllTagsAsObjectFields (0.00s)
+=== RUN   TestElasticsearchStorage_IndexTemplates
+    integration.go:109: This test requires environment variable STORAGE=elasticsearch|opensearch
+--- 🔕 SKIP: TestElasticsearchStorage_IndexTemplates (0.00s)
+=== RUN   TestIndexCleaner_doNotFailOnEmptyStorage
+    integration.go:109: This test requires environment variable STORAGE=elasticsearch|opensearch
+--- 🔕 SKIP: TestIndexCleaner_doNotFailOnEmptyStorage (0.00s)
+=== RUN   TestIndexCleaner_doNotFailOnFullStorage
+    integration.go:109: This test requires environment variable STORAGE=elasticsearch|opensearch
+--- 🔕 SKIP: TestIndexCleaner_doNotFailOnFullStorage (0.00s)
+=== RUN   TestIndexCleaner
+    integration.go:109: This test requires environment variable STORAGE=elasticsearch|opensearch
+--- 🔕 SKIP: TestIndexCleaner (0.00s)
+=== RUN   TestIndexRollover_FailIfILMNotPresent
+    integration.go:109: This test requires environment variable STORAGE=elasticsearch|opensearch
+--- 🔕 SKIP: TestIndexRollover_FailIfILMNotPresent (0.00s)
+=== RUN   TestIndexRollover_CreateIndicesWithILM
+    integration.go:109: This test requires environment variable STORAGE=elasticsearch|opensearch
+--- 🔕 SKIP: TestIndexRollover_CreateIndicesWithILM (0.00s)
+=== RUN   TestGRPCRemoteStorage
+    integration.go:109: This test requires environment variable STORAGE=grpc
+--- 🔕 SKIP: TestGRPCRemoteStorage (0.00s)
+=== RUN   TestKafkaStorage
+    integration.go:109: This test requires environment variable STORAGE=kafka
+--- 🔕 SKIP: TestKafkaStorage (0.00s)
+=== RUN   TestMemoryStorage
+    integration.go:109: This test requires environment variable STORAGE=memory
+--- 🔕 SKIP: TestMemoryStorage (0.00s)
+=== RUN   TestDedupeSpans
+--- ✅ PASS: TestDedupeSpans (0.00s)
+✅ PASS
+coverage: 0.5% of statements in ./...
+ok  	github.com/jaegertracing/jaeger/plugin/storage/integration	1.164s	coverage: 0.5% of statements in ./...
+make[1]: Leaving directory '/home/runner/work/jaeger/jaeger'
+T15:38:15 teardown_storage docker-compose/elasticsearch/v7/docker-compose.yml
+T15:38:15 local compose_file=docker-compose/elasticsearch/v7/docker-compose.yml
+T15:38:15 docker compose -f docker-compose/elasticsearch/v7/docker-compose.yml down
+time="2024-07-07T15:38:15Z" level=warning msg="/home/runner/work/jaeger/jaeger/docker-compose/elasticsearch/v7/docker-compose.yml: `version` is obsolete"
+ Container v7-elasticsearch-1  Stopping
+ Container v7-elasticsearch-1  Stopped
+ Container v7-elasticsearch-1  Removing
+ Container v7-elasticsearch-1  Removed
+ Network v7_default  Removing
+ Network v7_default  Removed

@@ -97,18 +97,12 @@ teardown_storage() {
 }
 
 build_local_img(){
-    local LOCAL_FLAG=''
-    local platforms="linux/amd64"
-    # Loop through each platform (separated by commas)
-    for platform in $(echo "$platforms" | tr ',' ' '); do
-      # Extract the architecture from the platform string
-      arch=${platform##*/}  # Remove everything before the last slash
-      make "build-binaries-$arch"
-    done
-    export GITHUB_SHA="local-test"
-    make create-baseimg
-    bash scripts/build-upload-a-docker-image.sh ${LOCAL_FLAG} -b -c jaeger-es-index-cleaner -d cmd/es-index-cleaner -p "${platforms}" -t release -l Y
-    bash scripts/build-upload-a-docker-image.sh ${LOCAL_FLAG} -b -c jaeger-es-rollover -d cmd/es-rollover  -p "${platforms}" -t release -l Y
+    make build-es-index-cleaner GOOS=linux
+    make build-es-rollover GOOS=linux
+    make create-baseimg PLATFORMS=linux/$(go env GOARCH)
+    #build es-index-cleaner and es-rollover images
+    GITHUB_SHA=local-test BRANCH=local-test bash scripts/build-upload-a-docker-image.sh -l -b -c jaeger-es-index-cleaner -d cmd/es-index-cleaner -t release -p linux/$(go env GOARCH)
+    GITHUB_SHA=local-test BRANCH=local-test bash scripts/build-upload-a-docker-image.sh -l -b -c jaeger-es-rollover -d cmd/es-rollover -t release -p linux/$(go env GOARCH)
 }
 
 main() {
